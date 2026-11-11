@@ -1,10 +1,10 @@
-# BUG Clicker — 원본 앱 아카이브
+# BUG Clicker: 원본 앱 아카이브
 
 ![BUG Clicker 원본 앱 아카이브](docs/social-preview.png)
 
 [![Electron 44.2.0](https://img.shields.io/badge/Electron-44.2.0-47848F?logo=electron&logoColor=white)](https://releases.electronjs.org/release/v44.2.0)
 ![플랫폼: Windows, macOS, Linux](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-4B5563)
-[![REA 6.8.0 — Windows 분석](https://img.shields.io/badge/REA-6.8.0%20%7C%20Windows%20analysis-6750A4)](https://github.com/morluto/rea)
+[![REA 6.8.0: Windows 분석](https://img.shields.io/badge/REA-6.8.0%20%7C%20Windows%20analysis-6750A4)](https://github.com/morluto/rea)
 
 [English](README.md) · **한국어**
 
