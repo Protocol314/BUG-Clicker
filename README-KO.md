@@ -22,7 +22,7 @@
 
 ## 실행 방법
 
-Electron 설치, Linux 라이브러리·자동 실행 및 OS별 실행 절차는 **[한국어 설치 안내](docs/install-ko.md)**를 참조하세요. [English installation guide](docs/install.md)도 제공합니다.
+Electron 설치, Linux 라이브러리·자동 실행 및 OS별 실행 절차는 [한국어 설치 안내](docs/install-ko.md)를 참조하세요. [English installation guide](docs/install.md)도 제공합니다.
 
 Windows와 Linux WSL 환경에서 격리된 프로필로 실행을 확인했습니다. 실제 macOS와 Linux ARM64 실행은 아직 검증하지 못했습니다. 개발용 Electron 실행은 설치본의 서명, 업데이트, 경로 및 OS 통합과 다를 수 있습니다.
 
