@@ -1,0 +1,521 @@
+{
+  "about": "리눅스판(Linux 1.0.0~) 자주 묻는 질문. main.js mergeLinuxFaq 가 faq.json 과 합친다. 같은 id 는 이 답으로 바꾸고, 새 id 는 맨 앞에, drop 의 id 는 뺀다.",
+  "drop": [
+    "smartscreen",
+    "antivirus",
+    "admin"
+  ],
+  "items": [
+    {
+      "id": "linuxBeta",
+      "guide": false,
+      "actions": [
+        {
+          "act": "releases",
+          "label": {
+            "ko": "리눅스판 내려받기 페이지 열기",
+            "en": "Open the Linux download page",
+            "ja": "Linux版のダウンロードページを開く",
+            "zh": "開啟 Linux 版下載頁面"
+          }
+        }
+      ],
+      "ko": {
+        "q": "리눅스판은 무엇이 다른가요? (beta)",
+        "a": [
+          "리눅스판은 beta 입니다. 부족하거나 작동하지 않을 수 있습니다. 문제가 있으면 설정 → 정보 → 문제 해결 → \"문제 보고 파일 만들기\"로 만든 파일을 BUG에게 보내 주세요. 배포판 · 화면 방식(X11 / Wayland)이 함께 적힙니다.",
+          "캐릭터 꾸미기 · 대사 · 파츠 · 말풍선 · 알림 · 주고받기는 Windows 판과 같습니다.",
+          "다른 점: 타자 감지는 아직 없습니다. 음악 감지는 기본 출력 장치(스피커 · 이어폰)에서 나는 소리를 받습니다. Wayland 화면에서는 X11 호환 모드로 켭니다.",
+          "x64(64비트 Intel · AMD) 컴퓨터용 AppImage 하나로 나옵니다. 업데이트는 Windows 판과 같은 방식으로 앱 안에서 받습니다."
+        ]
+      },
+      "en": {
+        "q": "How is the Linux version different? (beta)",
+        "a": [
+          "The Linux version is in beta. Some things may be missing or may not work. If something goes wrong, send BUG the file made with Settings → About → Troubleshooting → \"Make a problem report file\". It includes your distro and display system (X11 / Wayland).",
+          "Character editing, lines, parts, speech bubbles, reminders and sharing work the same as on Windows.",
+          "Differences: typing detection isn't available yet. Music detection captures the sound from the default output device (speakers or earphones). On Wayland, the app starts in X11 compatibility mode.",
+          "It comes as a single AppImage for x64 (64-bit Intel / AMD) computers. Updates arrive inside the app, the same way as on Windows."
+        ]
+      },
+      "ja": {
+        "q": "Linux版は何が違いますか？（beta）",
+        "a": [
+          "Linux版はベータ版です。不十分だったり動作しなかったりすることがあります。問題があれば、設定 → 情報 → トラブル対処 →「問題報告ファイルを作る」で作ったファイルを BUG に送ってください。ディストリビューション・画面方式（X11 / Wayland）も記録されます。",
+          "キャラクターの編集・セリフ・パーツ・吹き出し・リマインダー・共有は Windows 版と同じです。",
+          "違い：タイピングの検出はまだありません。音楽の検出は、既定の出力デバイス（スピーカー・イヤホン）から出る音を受け取ります。Wayland の画面では X11 互換モードで起動します。",
+          "x64（64ビット Intel・AMD）パソコン用の AppImage ひとつで提供します。アップデートは Windows 版と同じくアプリ内で受け取ります。"
+        ]
+      },
+      "zh": {
+        "q": "Linux 版有什麼不同？（beta）",
+        "a": [
+          "Linux 版為 beta 版，可能有不足之處或無法運作。如有問題，請將以 設定 → 資訊 → 疑難排解 →「建立問題回報檔」建立的檔案寄給 BUG。檔案會一併記錄發行版與顯示方式（X11 / Wayland）。",
+          "角色編輯、台詞、配件、對話框、提醒、分享都與 Windows 版相同。",
+          "不同之處：目前還沒有打字偵測。音樂偵測會接收預設輸出裝置（喇叭 · 耳機）發出的聲音。在 Wayland 畫面上會以 X11 相容模式啟動。",
+          "以單一 AppImage 提供，適用 x64（64 位元 Intel · AMD）電腦。更新與 Windows 版相同，會在 App 內接收。"
+        ]
+      }
+    },
+    {
+      "id": "nostart",
+      "guide": false,
+      "actions": [
+        {
+          "act": "openData",
+          "label": {
+            "ko": "데이터 폴더 열기",
+            "en": "Open data folder",
+            "ja": "データフォルダーを開く",
+            "zh": "開啟資料儲存資料夾"
+          }
+        }
+      ],
+      "ko": {
+        "q": "AppImage를 눌러도 켜지지 않아요",
+        "a": [
+          "받은 뒤 한 번만 실행 허용을 켜 주세요. 파일을 오른쪽 클릭 → 속성 → 권한 → \"프로그램으로 실행 허용\". 또는 터미널에서 chmod +x BUG-Clicker-Linux.AppImage",
+          "그래도 켜지지 않으면 libfuse2가 없는 것일 수 있습니다(Ubuntu 22.04 이상에서 흔함). 터미널에서 sudo apt install libfuse2 (Ubuntu 24.04는 libfuse2t64)를 설치해 주세요.",
+          "터미널에서 ./BUG-Clicker-Linux.AppImage로 켜면 안 되는 이유가 글로 나옵니다. 문의하실 때 그 글을 함께 보내 주세요.",
+          "이미 켜져 있으면 다시 눌렀을 때 설정 창이 열립니다. 캐릭터는 화면 오른쪽 아래 근처에 뜹니다."
+        ]
+      },
+      "en": {
+        "q": "Nothing happens when I open the AppImage",
+        "a": [
+          "After downloading, allow it to run once: right-click the file → Properties → Permissions → \"Allow executing file as program\". Or run chmod +x BUG-Clicker-Linux.AppImage in a terminal.",
+          "If it still doesn't start, libfuse2 may be missing (common on Ubuntu 22.04 and later). Install it with sudo apt install libfuse2 (libfuse2t64 on Ubuntu 24.04).",
+          "Starting it from a terminal with ./BUG-Clicker-Linux.AppImage shows why it fails. Please include that text when you contact BUG.",
+          "If it's already running, opening it again shows the Settings window. Characters appear near the bottom right of the screen."
+        ]
+      },
+      "ja": {
+        "q": "AppImage を開いても起動しません",
+        "a": [
+          "ダウンロード後に一度だけ実行を許可してください。ファイルを右クリック → プロパティ → アクセス権 →「プログラムとして実行可能」。またはターミナルで chmod +x BUG-Clicker-Linux.AppImage",
+          "それでも起動しない場合、libfuse2 がないのかもしれません（Ubuntu 22.04 以降でよくあります）。ターミナルで sudo apt install libfuse2（Ubuntu 24.04 は libfuse2t64）をインストールしてください。",
+          "ターミナルで ./BUG-Clicker-Linux.AppImage と起動すると、動かない理由が表示されます。お問い合わせの際はその文も一緒に送ってください。",
+          "すでに起動している場合、もう一度開くと設定ウィンドウが開きます。キャラクターは画面の右下あたりに表示されます。"
+        ]
+      },
+      "zh": {
+        "q": "開啟 AppImage 卻沒有啟動",
+        "a": [
+          "下載後請先允許執行一次：在檔案上按右鍵 → 內容 → 權限 →「允許以程式執行」。或在終端機執行 chmod +x BUG-Clicker-Linux.AppImage",
+          "若仍無法啟動，可能是缺少 libfuse2（Ubuntu 22.04 以後常見）。請在終端機執行 sudo apt install libfuse2（Ubuntu 24.04 為 libfuse2t64）安裝。",
+          "在終端機以 ./BUG-Clicker-Linux.AppImage 啟動，會以文字顯示無法啟動的原因。詢問時請一併附上該文字。",
+          "如果已經在執行，再次開啟會打開設定視窗。角色會出現在畫面右下附近。"
+        ]
+      }
+    },
+    {
+      "id": "wayland",
+      "guide": false,
+      "ko": {
+        "q": "Wayland 에서도 쓸 수 있나요?",
+        "a": [
+          "네. Wayland 화면에서는 X11 호환 모드(XWayland)로 켭니다. Wayland는 앱이 창 위치를 정하거나 창을 늘 맨 앞에 두는 것을 막아서, 그대로 켜면 캐릭터 끌기 · 빈 곳 클릭 통과 · 항상 맨 위가 되지 않습니다.",
+          "켤 때 앱이 한 번 스스로 다시 켜지는 것은 이 때문입니다.",
+          "XWayland가 없는 데스크톱에서는 Wayland 그대로 켜지고, 위 기능이 되지 않을 수 있습니다."
+        ]
+      },
+      "en": {
+        "q": "Can I use it on Wayland?",
+        "a": [
+          "Yes. On Wayland, the app starts in X11 compatibility mode (XWayland). Wayland stops apps from placing their windows or keeping them on top, so without it dragging characters, click-through on empty areas and Always on top wouldn't work.",
+          "This is why the app restarts itself once when it starts.",
+          "On desktops without XWayland it starts as a Wayland app, and these features may not work."
+        ]
+      },
+      "ja": {
+        "q": "Wayland でも使えますか？",
+        "a": [
+          "はい。Wayland の画面では X11 互換モード（XWayland）で起動します。Wayland はアプリがウィンドウの位置を決めたり常に最前面に置いたりすることを止めるため、そのままではキャラクターのドラッグ・空いた所のクリック透過・常に最前面が使えません。",
+          "起動時にアプリが一度自分で再起動するのはそのためです。",
+          "XWayland のないデスクトップでは Wayland のまま起動し、上の機能が使えないことがあります。"
+        ]
+      },
+      "zh": {
+        "q": "可以在 Wayland 上使用嗎？",
+        "a": [
+          "可以。在 Wayland 畫面上會以 X11 相容模式（XWayland）啟動。Wayland 不允許 App 決定視窗位置或讓視窗保持在最上層，直接啟動的話，拖曳角色、空白處點擊穿透、保持在最上層都無法使用。",
+          "因此 App 啟動時會自己重新啟動一次。",
+          "在沒有 XWayland 的桌面上會以 Wayland 啟動，上述功能可能無法使用。"
+        ]
+      }
+    },
+    {
+      "id": "transparent",
+      "guide": false,
+      "ko": {
+        "q": "캐릭터 둘레가 검은 네모로 보여요",
+        "a": [
+          "투명한 창을 그리려면 데스크톱의 창 효과(컴포지터)가 켜져 있어야 합니다. GNOME · KDE Plasma · Cinnamon은 기본으로 켜져 있습니다.",
+          "Xfce는 설정 → 창 관리자 조정 → 합성기 → \"디스플레이 합성 사용\"을 켜 주세요. 가벼운 창 관리자(i3 등)는 picom 같은 컴포지터를 함께 켜 주세요.",
+          "그래도 같으면 설정 → 정보 → 문제 해결에서 \"그래픽 가속 끄기\"를 켜고 다시 시작해 보세요."
+        ]
+      },
+      "en": {
+        "q": "There's a black box around the character",
+        "a": [
+          "Transparent windows need the desktop's window effects (a compositor) to be on. GNOME, KDE Plasma and Cinnamon have it on by default.",
+          "On Xfce, turn on Settings → Window Manager Tweaks → Compositor → \"Enable display compositing\". With lightweight window managers (such as i3), run a compositor such as picom as well.",
+          "If it's still the same, turn on \"Turn off graphics acceleration\" in Settings → About → Troubleshooting and restart."
+        ]
+      },
+      "ja": {
+        "q": "キャラクターのまわりが黒い四角に見えます",
+        "a": [
+          "透明なウィンドウを描くには、デスクトップのウィンドウ効果（コンポジター）がオンである必要があります。GNOME・KDE Plasma・Cinnamon は最初からオンです。",
+          "Xfce では 設定 → ウィンドウマネージャー (詳細) → コンポジッター →「表示のコンポジットを有効にする」をオンにしてください。軽いウィンドウマネージャー（i3 など）では picom などのコンポジターも一緒に起動してください。",
+          "それでも同じなら、設定 → 情報 → トラブル対処で「グラフィックアクセラレーションをオフ」にして再起動してみてください。"
+        ]
+      },
+      "zh": {
+        "q": "角色周圍出現黑色方框",
+        "a": [
+          "要繪製透明視窗，桌面的視窗效果（合成器）必須開啟。GNOME · KDE Plasma · Cinnamon 預設為開啟。",
+          "Xfce 請開啟 設定 → 視窗管理員微調 → 合成器 →「啟用顯示合成」。使用輕量視窗管理員（i3 等）時，請一併啟動 picom 等合成器。",
+          "若仍相同，請在 設定 → 資訊 → 疑難排解 開啟「關閉圖形加速」後重新啟動。"
+        ]
+      }
+    },
+    {
+      "id": "typing",
+      "guide": false,
+      "actions": [
+        {
+          "act": "tab:react",
+          "label": {
+            "ko": "반응 설정 열기",
+            "en": "Open Reactions",
+            "ja": "リアクション設定を開く",
+            "zh": "開啟反應設定"
+          }
+        }
+      ],
+      "ko": {
+        "q": "타자에 반응하지 않아요",
+        "a": [
+          "리눅스판에서는 아직 타자 감지를 쓸 수 없습니다.",
+          "리눅스에서 키 입력을 알려면 키보드 전체를 읽을 수 있는 큰 권한(입력 장치 읽기)이 필요합니다. 안전하게 할 방법을 찾을 때까지 꺼두겠습니다.",
+          "음악 · 게임 소리에 맞춰 움직이기는 쓸 수 있습니다."
+        ]
+      },
+      "en": {
+        "q": "It doesn't react to typing",
+        "a": [
+          "Typing detection isn't available in the Linux version yet.",
+          "On Linux, detecting key presses needs a broad permission that can read the whole keyboard (reading input devices). We'll keep it off until a safe way is found.",
+          "Moving to music and game sound is available."
+        ]
+      },
+      "ja": {
+        "q": "タイピングに反応しません",
+        "a": [
+          "Linux版ではまだタイピングの検出を使えません。",
+          "Linux でキー入力を知るには、キーボード全体を読める大きな権限（入力デバイスの読み取り）が必要です。安全な方法が見つかるまでオフにしておきます。",
+          "音楽・ゲームの音に合わせて動く機能は使えます。"
+        ]
+      },
+      "zh": {
+        "q": "打字時沒有反應",
+        "a": [
+          "Linux 版目前還無法使用打字偵測。",
+          "在 Linux 上偵測按鍵需要能讀取整個鍵盤的高權限（讀取輸入裝置）。在找到安全的做法之前會先關閉。",
+          "可以使用配合音樂 · 遊戲聲音動作的功能。"
+        ]
+      }
+    },
+    {
+      "id": "music",
+      "guide": false,
+      "actions": [
+        {
+          "act": "tab:react",
+          "label": {
+            "ko": "반응 설정 열기",
+            "en": "Open Reactions",
+            "ja": "リアクション設定を開く",
+            "zh": "開啟反應設定"
+          }
+        },
+        {
+          "act": "restart",
+          "label": {
+            "ko": "감지 다시 시작",
+            "en": "Restart detection",
+            "ja": "検出を再起動",
+            "zh": "重新啟動偵測"
+          }
+        }
+      ],
+      "ko": {
+        "q": "음악 · 게임 소리에 반응하지 않아요",
+        "a": [
+          "\"소리에 맞춰 움직이기\"가 켜져 있는지, \"반응할 소리\"에서 음악 · 게임이 골라져 있는지 확인해 주세요.",
+          "리눅스판은 기본 출력 장치(스피커 · 이어폰)에서 나는 소리를 받습니다. 이어폰 · 블루투스로 바꿨는데 움직이지 않으면, 소리 설정에서 그 장치가 기본 출력 장치인지 확인하고 \"감지 다시 시작\"을 눌러 주세요.",
+          "\"컴퓨터 소리를 받지 못했습니다\"가 나오면 PulseAudio 또는 PipeWire(pipewire-pulse)가 켜져 있는지 확인해 주세요. 대부분의 데스크톱에는 처음부터 켜져 있습니다.",
+          "마이크 같은 녹음 장치로 받고 싶으면 설정 → 반응 → \"소리 받을 곳\"에서 고를 수 있습니다.",
+          "막대는 움직이는데 캐릭터가 거의 움직이지 않으면 \"박자 감도\"를 높여 주세요."
+        ]
+      },
+      "en": {
+        "q": "It doesn't react to music or game sound",
+        "a": [
+          "Check that \"Move to sound\" is on and that music or games is selected under \"Sounds to react to\".",
+          "The Linux version captures the sound from the default output device (speakers or earphones). If it stops moving after switching to earphones or Bluetooth, check in your sound settings that the device is the default output device, then press \"Restart detection\".",
+          "If you see \"Couldn't capture computer sound\", check that PulseAudio or PipeWire (pipewire-pulse) is running. Most desktops have it on from the start.",
+          "To use a recording device such as a microphone instead, pick it in Settings → Reactions → \"Sound source\".",
+          "If the bar moves but the character barely moves, raise \"Beat sensitivity\"."
+        ]
+      },
+      "ja": {
+        "q": "音楽・ゲームの音に反応しません",
+        "a": [
+          "「音に合わせて動く」がオンか、「反応する音」で音楽・ゲームが選ばれているか確認してください。",
+          "Linux版は、既定の出力デバイス（スピーカー・イヤホン）から出る音を受け取ります。イヤホンや Bluetooth に替えてから動かない場合は、サウンド設定でそのデバイスが既定の出力デバイスか確認し、「検出を再起動」を押してください。",
+          "「パソコンの音を受け取れませんでした」と出た場合は、PulseAudio または PipeWire（pipewire-pulse）が動いているか確認してください。ほとんどのデスクトップでは最初から動いています。",
+          "マイクなどの録音デバイスで受け取りたい場合は、設定 → リアクション →「音を受け取る場所」で選べます。",
+          "バーは動くのにキャラクターがほとんど動かない場合は「拍の感度」を上げてください。"
+        ]
+      },
+      "zh": {
+        "q": "沒有隨音樂 · 遊戲聲音反應",
+        "a": [
+          "請確認「跟著聲音動」已開啟，並在「要反應的聲音」中選了音樂 · 遊戲。",
+          "Linux 版會接收預設輸出裝置（喇叭 · 耳機）發出的聲音。切換到耳機 · 藍牙後角色不動時，請在音效設定中確認該裝置是否為預設輸出裝置，再按「重新啟動偵測」。",
+          "出現「無法接收電腦聲音」時，請確認 PulseAudio 或 PipeWire（pipewire-pulse）是否正在執行。大多數桌面環境預設都已開啟。",
+          "若想改用麥克風等錄音裝置，可在 設定 → 反應 →「接收聲音的來源」中選擇。",
+          "音量條有動但角色幾乎不動時，請提高「節拍靈敏度」。"
+        ]
+      }
+    },
+    {
+      "id": "black",
+      "guide": false,
+      "ko": {
+        "q": "캐릭터 꾸미기 · 대사 편집 창이 검게 나오거나 바로 닫혀요",
+        "a": [
+          "설정 → 정보 → 문제 해결에서 \"그래픽 가속 끄기\"를 켜고 다시 시작해 주세요. 그래픽 드라이버(특히 NVIDIA)와 맞지 않을 때 자주 생깁니다.",
+          "창이 거듭 멈추면 \"안전 모드로 다시 시작\"을 물어봅니다. 안전 모드로도 안 되면 한 단계 더(보호 상자 끄기)를 물어봅니다. 설정 → 정보 → 문제 해결에서 그래픽 가속을 다시 켜면 안전 모드도 꺼집니다.",
+          "그래도 안 되면 데이터 폴더(~/.config/BUG Clicker)의 startup-error.log 파일이나 문제 보고 파일을 BUG에게 보내 주세요."
+        ]
+      },
+      "en": {
+        "q": "The Character Editor or Line Editor window is black or closes right away",
+        "a": [
+          "Turn on \"Turn off graphics acceleration\" in Settings → About → Troubleshooting and restart. This often happens when the graphics driver (especially NVIDIA) doesn't get along with the app.",
+          "If windows keep stopping, the app asks whether to \"Restart in safe mode\". If safe mode doesn't help either, it asks about one more step (turning off the protection box). Turning graphics acceleration back on in Settings → About → Troubleshooting also turns off safe mode.",
+          "If it still doesn't work, send BUG the startup-error.log file in the data folder (~/.config/BUG Clicker) or a problem report file."
+        ]
+      },
+      "ja": {
+        "q": "キャラクター編集・セリフ編集のウィンドウが黒くなる、またはすぐ閉じます",
+        "a": [
+          "設定 → 情報 → トラブル対処で「グラフィックアクセラレーションをオフ」にして再起動してください。グラフィックドライバー（特に NVIDIA）と合わないときによく起こります。",
+          "ウィンドウが何度も止まると「セーフモードで再起動」するか尋ねます。セーフモードでもだめなら、もう一段階（保護ボックスをオフ）を尋ねます。設定 → 情報 → トラブル対処でグラフィックアクセラレーションをオンに戻すと、セーフモードもオフになります。",
+          "それでもだめなら、データフォルダー（~/.config/BUG Clicker）の startup-error.log ファイルか問題報告ファイルを BUG に送ってください。"
+        ]
+      },
+      "zh": {
+        "q": "角色編輯 · 台詞編輯視窗變黑或馬上關閉",
+        "a": [
+          "請在 設定 → 資訊 → 疑難排解 開啟「關閉圖形加速」後重新啟動。顯示卡驅動程式（尤其是 NVIDIA）不相容時常會發生。",
+          "視窗一再停止時，會詢問是否「以安全模式重新啟動」。安全模式也不行時，會再詢問下一步（關閉保護沙箱）。在 設定 → 資訊 → 疑難排解 重新開啟圖形加速，安全模式也會一併關閉。",
+          "若仍無法解決，請將資料夾（~/.config/BUG Clicker）中的 startup-error.log 檔案或問題回報檔寄給 BUG。"
+        ]
+      }
+    },
+    {
+      "id": "lost",
+      "guide": false,
+      "actions": [
+        {
+          "act": "gather",
+          "label": {
+            "ko": "전부 한자리에 모으기",
+            "en": "Gather all in one spot",
+            "ja": "すべて1か所に集める",
+            "zh": "全部集中到一處"
+          }
+        },
+        {
+          "act": "tab:pets",
+          "label": {
+            "ko": "캐릭터 설정 열기",
+            "en": "Open Characters",
+            "ja": "キャラクター設定を開く",
+            "zh": "開啟角色設定"
+          }
+        }
+      ],
+      "ko": {
+        "q": "캐릭터가 화면 밖으로 사라졌어요",
+        "a": [
+          "아래 \"전부 한자리에 모으기\"를 누르거나, 트레이 아이콘이 보이면 트레이 아이콘 → \"전부 한자리에 모으기\"를 눌러 주세요.",
+          "또는 설정 → 캐릭터 → 그 캐릭터 → \"화면 안으로 되돌리기\"를 눌러 주세요. 설정 창은 AppImage를 한 번 더 누르면 열립니다."
+        ]
+      },
+      "en": {
+        "q": "A character disappeared off the screen",
+        "a": [
+          "Press \"Gather all in one spot\" below, or if you can see the tray icon, use tray icon → \"Gather all in one spot\".",
+          "Or go to Settings → Characters → that character → \"Bring back on screen\". Opening the AppImage again shows the Settings window."
+        ]
+      },
+      "ja": {
+        "q": "キャラクターが画面の外に消えました",
+        "a": [
+          "下の「すべて1か所に集める」を押すか、トレイアイコンが見える場合はトレイアイコン →「すべて1か所に集める」を押してください。",
+          "または 設定 → キャラクター → そのキャラクター →「画面内に戻す」を押してください。設定ウィンドウは AppImage をもう一度開くと表示されます。"
+        ]
+      },
+      "zh": {
+        "q": "角色消失到畫面外了",
+        "a": [
+          "請按下方的「全部集中到一處」，或在看得到系統匣圖示時，按 系統匣圖示 →「全部集中到一處」。",
+          "或按 設定 → 角色 → 該角色 →「移回畫面內」。再次開啟 AppImage 就會打開設定視窗。"
+        ]
+      }
+    },
+    {
+      "id": "data",
+      "guide": false,
+      "actions": [
+        {
+          "act": "openData",
+          "label": {
+            "ko": "데이터 폴더 열기",
+            "en": "Open data folder",
+            "ja": "データフォルダーを開く",
+            "zh": "開啟資料儲存資料夾"
+          }
+        }
+      ],
+      "ko": {
+        "q": "캐릭터와 설정은 어디에 저장되나요?",
+        "a": [
+          "기본은 홈 폴더 안의 ~/.config/BUG Clicker 입니다(숨은 폴더). 아래 버튼으로 지금 쓰는 폴더를 열 수 있습니다.",
+          "AppImage 옆에 \"BUG Clicker 데이터\" 폴더를 직접 만들어 두면 그 폴더에 저장합니다. AppImage와 그 폴더를 함께 옮기면 캐릭터 · 설정이 그대로 따라갑니다.",
+          "새 버전 AppImage로 바꿔도 캐릭터는 그대로입니다."
+        ]
+      },
+      "en": {
+        "q": "Where are characters and settings saved?",
+        "a": [
+          "By default in ~/.config/BUG Clicker inside your home folder (a hidden folder). The button below opens the folder in use now.",
+          "If you create a \"BUG Clicker 데이터\" folder next to the AppImage yourself, data is saved there. Move the AppImage and that folder together and your characters and settings come along.",
+          "Your characters stay the same when you switch to a new AppImage version."
+        ]
+      },
+      "ja": {
+        "q": "キャラクターと設定はどこに保存されますか？",
+        "a": [
+          "標準ではホームフォルダー内の ~/.config/BUG Clicker（隠しフォルダー）です。下のボタンで、いま使っているフォルダーを開けます。",
+          "AppImage の隣に「BUG Clicker 데이터」フォルダーを自分で作っておくと、そのフォルダーに保存します。AppImage とそのフォルダーを一緒に移せば、キャラクター・設定もそのまま付いてきます。",
+          "新しいバージョンの AppImage に替えても、キャラクターはそのままです。"
+        ]
+      },
+      "zh": {
+        "q": "角色和設定儲存在哪裡？",
+        "a": [
+          "預設在家目錄中的 ~/.config/BUG Clicker（隱藏資料夾）。可用下方按鈕開啟目前使用的資料夾。",
+          "若在 AppImage 旁自行建立「BUG Clicker 데이터」資料夾，就會儲存在那裡。將 AppImage 與該資料夾一起移動，角色和設定也會跟著過去。",
+          "換成新版本的 AppImage，角色也會保持原樣。"
+        ]
+      }
+    },
+    {
+      "id": "protected",
+      "guide": false,
+      "actions": [
+        {
+          "act": "tab:import",
+          "label": {
+            "ko": "주고받기 열기",
+            "en": "Open Share",
+            "ja": "共有を開く",
+            "zh": "開啟分享"
+          }
+        }
+      ],
+      "ko": {
+        "q": "받은 캐릭터를 다른 컴퓨터에서도 쓰고 싶어요",
+        "a": [
+          "받은(.cvclk) 캐릭터의 그림은 함부로 꺼내 가지 못하도록, 받은 컴퓨터 · 사용자에서만 열리게 보호되어 있습니다.",
+          "리눅스판은 비밀번호 보관함(GNOME 키링 · KDE 지갑)이 있으면 보관함으로, 없으면 이 컴퓨터 · 이 사용자에 묶은 열쇠로 잠급니다.",
+          "다른 컴퓨터에서는 데이터 폴더를 복사하는 대신, 처음 받은 .cvclk 파일을 주고받기 → 가져오기로 다시 가져와 주세요.",
+          "\"비밀번호 보관함이 잠겨 있어…\"가 나오면 보관함을 잠금 해제하거나, 평소 쓰던 데스크톱으로 로그인한 뒤 다시 켜 주세요."
+        ]
+      },
+      "en": {
+        "q": "I want to use a received character on another computer",
+        "a": [
+          "Pictures of received (.cvclk) characters are protected so they only open for the computer and user that received them, to keep them from being taken out freely.",
+          "The Linux version locks them with the password keyring (GNOME Keyring / KDE Wallet) if there is one, or otherwise with a key tied to this computer and this user.",
+          "On another computer, instead of copying the data folder, import the original .cvclk file again through Share → Import.",
+          "If you see \"The password keyring is locked…\", unlock the keyring or log in to your usual desktop, then start the app again."
+        ]
+      },
+      "ja": {
+        "q": "受け取ったキャラクターを別のパソコンでも使いたい",
+        "a": [
+          "受け取った（.cvclk）キャラクターの画像は、勝手に取り出されないよう、受け取ったパソコン・ユーザーでのみ開けるよう保護されています。",
+          "Linux版は、パスワードキーリング（GNOME キーリング・KDE ウォレット）があればキーリングで、なければこのパソコン・このユーザーに結びつけた鍵で保護します。",
+          "別のパソコンでは、データフォルダーをコピーする代わりに、最初に受け取った .cvclk ファイルを 共有 → 取り込み でもう一度取り込んでください。",
+          "「パスワードキーリングがロックされているため…」と出た場合は、キーリングのロックを解除するか、いつものデスクトップでログインしてから起動し直してください。"
+        ]
+      },
+      "zh": {
+        "q": "想在其他電腦上使用收到的角色",
+        "a": [
+          "收到的（.cvclk）角色圖片受到保護，只能在收到它的電腦 · 使用者上開啟，以免被隨意取出。",
+          "Linux 版若有密碼鑰匙圈（GNOME 鑰匙圈 · KDE 錢包）就用鑰匙圈鎖定，沒有的話則用綁定這台電腦、這位使用者的金鑰鎖定。",
+          "在其他電腦上，請不要複製資料夾，而是將最初收到的 .cvclk 檔案透過 分享 → 匯入 重新匯入。",
+          "出現「密碼鑰匙圈已鎖定…」時，請解鎖鑰匙圈，或用平常使用的桌面環境登入後重新啟動。"
+        ]
+      }
+    },
+    {
+      "id": "obs",
+      "guide": false,
+      "ko": {
+        "q": "OBS로 방송 · 녹화할 때 캐릭터가 까맣게 나와요",
+        "a": [
+          "OBS의 창 캡처는 투명한 창의 빈 곳을 까맣게 찍을 수 있습니다. BUG Clicker 캐릭터 창은 캐릭터 둘레가 투명해서 그렇게 보입니다.",
+          "바탕을 지우려면: 바탕화면 캐릭터 우클릭 → \"촬영 관련\" → \"방송용 배경색 (OBS)\"에서 초록을 고르고, OBS 소스에 \"색상 키\" 필터를 초록으로 넣으면 캐릭터만 남습니다. 다 쓰면 같은 메뉴에서 \"끄기\"를 눌러 주세요.",
+          "Wayland에서 켠 OBS는 화면 · 창을 고를 때 데스크톱의 화면 공유 창이 뜹니다. 그 창에서 BUG Clicker 캐릭터 창이나 화면을 골라 주세요.",
+          "앱 안의 촬영(PNG · GIF)은 이 설정과 상관없이 투명 · 어둡게 · 바탕화면 중에 고른 대로 찍힙니다."
+        ]
+      },
+      "en": {
+        "q": "The character shows up black when streaming or recording with OBS",
+        "a": [
+          "OBS window capture can record the empty parts of a transparent window as black. BUG Clicker character windows are transparent around the character, so they look like that.",
+          "To remove the background: right-click a desktop character → \"Capture\" → \"Broadcast background (OBS)\" and pick green, then add a \"Color Key\" filter set to green to the OBS source so only the character remains. When you're done, press \"Off\" in the same menu.",
+          "OBS running on Wayland shows the desktop's screen-sharing window when you pick a screen or window. Choose the BUG Clicker character window or the screen there.",
+          "The in-app capture (PNG · GIF) records with transparent, dark or desktop background as you choose, regardless of this setting."
+        ]
+      },
+      "ja": {
+        "q": "OBS で配信・録画するとキャラクターが黒く映ります",
+        "a": [
+          "OBS のウィンドウキャプチャは、透明なウィンドウの空いた所を黒く撮ることがあります。BUG Clicker のキャラクターウィンドウはキャラクターのまわりが透明なので、そう見えます。",
+          "背景を消すには：デスクトップのキャラクターを右クリック →「撮影関連」→「配信用の背景色 (OBS)」で緑を選び、OBS のソースに「カラーキー」フィルターを緑で入れると、キャラクターだけが残ります。使い終わったら同じメニューで「オフ」を押してください。",
+          "Wayland で起動した OBS では、画面・ウィンドウを選ぶときにデスクトップの画面共有ウィンドウが開きます。そこで BUG Clicker のキャラクターウィンドウか画面を選んでください。",
+          "アプリ内の撮影（PNG・GIF）は、この設定と関係なく、透明・暗く・デスクトップのうち選んだとおりに撮れます。"
+        ]
+      },
+      "zh": {
+        "q": "用 OBS 直播 · 錄影時角色變成黑色",
+        "a": [
+          "OBS 的視窗擷取可能會把透明視窗的空白處拍成黑色。BUG Clicker 的角色視窗在角色周圍是透明的，所以會這樣。",
+          "要去除背景：在桌面角色上按右鍵 →「拍攝相關」→「直播用背景色 (OBS)」選擇綠色，再於 OBS 來源加入設為綠色的「色彩鍵」濾鏡，就只會留下角色。用完後請在同一選單按「關閉」。",
+          "在 Wayland 上啟動的 OBS，選擇畫面 · 視窗時會出現桌面的畫面分享視窗。請在該視窗選擇 BUG Clicker 角色視窗或畫面。",
+          "App 內的拍攝（PNG · GIF）不受此設定影響，會依所選的透明 · 變暗 · 桌面方式拍攝。"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,720 @@
+{
+ "_note": "mac 판 자주 묻는 질문 (mac 1.0.0). faq.json 위에 덮어 쓴다. hide: 숨길 질문, replace: 같은 id 를 바꿈, addFirst: 맨 앞에 더함",
+ "hide": [
+  "admin",
+  "antivirus",
+  "smartscreen"
+ ],
+ "replace": [
+  {
+   "id": "typing",
+   "ko": {
+    "q": "타자에 반응하지 않아요",
+    "a": [
+     "Mac에서 타자에 맞춰 움직이기는 beta입니다.",
+     "beta 라 아직 부족하거나 작동하지 않을 수 있습니다. 많은 피드백을 기다립니다.",
+     "시스템 설정 → 개인정보 보호 및 보안 → 입력 모니터링에서 BUG Clicker를 켜 주세요. 켜면 10초 안에 저절로 다시 시작됩니다.",
+     "켜져 있는데도 안 되면 목록에서 BUG Clicker를 − 로 지운 뒤 BUG Clicker를 다시 시작하고, 다시 허용해 주세요. 새 버전을 dmg로 받으면 예전 허용이 목록에 남아 지금 앱과 맞지 않을 수 있습니다.",
+     "새 버전을 dmg로 새로 깔면 권한이 풀릴 수 있습니다. 목록에서 BUG Clicker를 껐다 켜거나, − 로 지운 뒤 다시 켜 주세요.",
+     "키는 누른 순간만 알고, 어떤 키인지는 읽지 않습니다. 암호 입력 칸에 칠 때는 macOS가 알려 주지 않아 움직이지 않습니다.",
+     "그래도 안 되면 설정 → 정보 → 문제 해결의 \"문제 보고 파일 만들기\"로 만든 파일을 X @BUGnDEV로 보내 주세요. 감지 상태 · 권한 상태가 함께 담깁니다(소리 · 키 내용은 담지 않습니다)."
+    ]
+   },
+   "en": {
+    "q": "It doesn't react to typing",
+    "a": [
+     "Moving to typing is in beta on Mac.",
+     "As a beta, it may still be incomplete or may not work. We look forward to your feedback.",
+     "Turn on BUG Clicker in System Settings → Privacy & Security → Input Monitoring. Once it's on, it restarts by itself within 10 seconds.",
+     "If it still doesn't work while turned on, remove BUG Clicker from the list with −, restart BUG Clicker and allow it again. After installing a new dmg, the old permission can stay in the list and no longer match the current app.",
+     "Installing a new version from the dmg may reset the permission. Turn BUG Clicker off and on in the list, or remove it with − and turn it on again.",
+     "It only knows the moment a key is pressed, never which key. macOS doesn't report typing in password fields, so the character won't move there.",
+     "If it still doesn't work, send the file made with Settings → About → Troubleshooting → \"Make a problem report file\" to X @BUGnDEV. It includes the detection and permission status (no sound or key contents)."
+    ]
+   },
+   "ja": {
+    "q": "タイピングに反応しません",
+    "a": [
+     "Mac のタイピングに合わせて動く機能は beta です。",
+     "beta のため、まだ足りない点があったり動かなかったりすることがあります。フィードバックをお待ちしています。",
+     "システム設定 → プライバシーとセキュリティ → 入力監視 で BUG Clicker をオンにしてください。オンにすると 10 秒以内に自動で再開します。",
+     "オンなのに動かない場合は、一覧から BUG Clicker を − で削除し、BUG Clicker を再起動してからもう一度許可してください。新しい版を dmg で入れると、以前の許可が一覧に残り、今のアプリと合わなくなることがあります。",
+     "新しいバージョンを dmg から入れ直すと許可が外れることがあります。一覧で BUG Clicker をオフ・オンするか、− で削除してからもう一度オンにしてください。",
+     "キーを押した瞬間だけを知り、どのキーかは読みません。パスワード入力欄では macOS が知らせないため、動きません。",
+     "それでも動かない場合は、設定 → 情報 → トラブル対処の「問題報告ファイルを作る」で作ったファイルを X @BUGnDEV に送ってください。検出・許可の状態も入ります（音やキーの内容は入りません）。"
+    ]
+   },
+   "zh": {
+    "q": "打字時沒有反應",
+    "a": [
+     "Mac 的跟著打字擺動目前是 beta。",
+     "由於是 beta，可能還不夠完善或無法運作。期待大家的回饋。",
+     "請在 系統設定 → 隱私權與安全性 → 輸入監控 中開啟 BUG Clicker。開啟後 10 秒內會自動重新開始。",
+     "已開啟仍無效時，請在列表中用 − 移除 BUG Clicker，重新啟動 BUG Clicker 後再允許一次。用 dmg 安裝新版本時，舊的權限可能留在列表中，與目前的 App 不相符。",
+     "用 dmg 重新安裝新版本時，權限可能會被解除。請在列表中把 BUG Clicker 關掉再打開，或用 − 移除後重新開啟。",
+     "只知道按下按鍵的瞬間，不會讀取按了哪個鍵。在密碼輸入欄打字時 macOS 不會通知，所以角色不會動。",
+     "如果還是不行，請把用 設定 → 關於 → 疑難排解 的「建立問題回報檔」做出的檔案傳給 X @BUGnDEV。檔案會包含偵測與權限狀態（不含聲音或按鍵內容）。"
+    ]
+   },
+   "actions": [
+    {
+     "act": "macInput",
+     "label": {
+      "ko": "입력 모니터링 열기",
+      "en": "Open Input Monitoring",
+      "ja": "入力監視を開く",
+      "zh": "打開輸入監控"
+     }
+    },
+    {
+     "act": "restartApp",
+     "label": {
+      "ko": "BUG Clicker 다시 시작",
+      "en": "Restart BUG Clicker",
+      "ja": "BUG Clicker を再起動",
+      "zh": "重新啟動 BUG Clicker"
+     }
+    },
+    {
+     "act": "tab:react",
+     "label": {
+      "ko": "반응 설정 열기",
+      "en": "Open Reactions",
+      "ja": "リアクション設定を開く",
+      "zh": "開啟反應設定"
+     }
+    },
+    {
+     "act": "report",
+     "label": {
+      "ko": "문제 보고 파일 만들기",
+      "en": "Make a problem report file",
+      "ja": "問題報告ファイルを作る",
+      "zh": "建立問題回報檔"
+     }
+    },
+    {
+     "act": "news",
+     "label": {
+      "ko": "소식 · 문의",
+      "en": "News · Contact",
+      "ja": "お知らせ · お問い合わせ",
+      "zh": "消息 · 詢問"
+     }
+    }
+   ]
+  },
+  {
+   "id": "music",
+   "ko": {
+    "q": "음악 · 게임 소리에 반응하지 않아요",
+    "a": [
+     "Mac에서 소리에 맞춰 움직이기는 beta이며, macOS 14.2 이상에서만 됩니다. 그보다 옛 macOS에는 다른 앱의 소리를 받는 방법이 없습니다.",
+     "beta 라 아직 부족하거나 작동하지 않을 수 있습니다. 많은 피드백을 기다립니다.",
+     "시스템 설정 → 개인정보 보호 및 보안 → 화면 및 시스템 오디오 녹음에서 BUG Clicker를 켠 뒤, BUG Clicker를 종료했다가 다시 켜 주세요.",
+     "켜져 있는데도 안 되면 목록에서 BUG Clicker를 − 로 지운 뒤 BUG Clicker를 다시 시작하고, 다시 허용해 주세요. 새 버전을 dmg로 받으면 예전 허용이 목록에 남아 지금 앱과 맞지 않을 수 있습니다.",
+     "\"소리 크기\" 막대가 움직이는지 봐 주세요. 막대가 움직이지 않으면 소리를 받지 못하는 것입니다. 이어폰 · 블루투스로 바꿨다면 \"감지 다시 시작\"을 눌러 주세요.",
+     "막대는 움직이는데 캐릭터가 거의 움직이지 않으면 \"박자 감도\"를 높여 주세요.",
+     "막대가 거의 차지 않으면 설정 → 반응 → \"소리 키우기\"를 올려 보세요. 박자를 찾는 데에만 쓰고, 들리는 소리는 그대로입니다.",
+     "소리는 세기만 재고, 녹음하거나 저장하지 않습니다.",
+     "그래도 안 되면 설정 → 정보 → 문제 해결의 \"문제 보고 파일 만들기\"로 만든 파일을 X @BUGnDEV로 보내 주세요. 감지 상태 · 권한 상태가 함께 담깁니다(소리 · 키 내용은 담지 않습니다)."
+    ]
+   },
+   "en": {
+    "q": "It doesn't react to music or game sounds",
+    "a": [
+     "Moving to sound is in beta on Mac and works only on macOS 14.2 or later. Earlier macOS versions have no way to receive other apps' sound.",
+     "As a beta, it may still be incomplete or may not work. We look forward to your feedback.",
+     "Turn on BUG Clicker in System Settings → Privacy & Security → Screen & System Audio Recording, then quit BUG Clicker and open it again.",
+     "If it still doesn't work while turned on, remove BUG Clicker from the list with −, restart BUG Clicker and allow it again. After installing a new dmg, the old permission can stay in the list and no longer match the current app.",
+     "See if the \"Volume\" bar moves. If it doesn't, no sound is coming in. If you switched to earphones or Bluetooth, press \"Restart detection\".",
+     "If the bar moves but the character barely moves, raise \"Beat sensitivity\".",
+     "If the bar barely fills, raise Settings → Reactions → \"Boost input\". It is only used to find the beat; what you hear stays the same.",
+     "Only the loudness is measured. Nothing is recorded or saved.",
+     "If it still doesn't work, send the file made with Settings → About → Troubleshooting → \"Make a problem report file\" to X @BUGnDEV. It includes the detection and permission status (no sound or key contents)."
+    ]
+   },
+   "ja": {
+    "q": "音楽 · ゲームの音に反応しません",
+    "a": [
+     "Mac の音に合わせて動く機能は beta で、macOS 14.2 以降でのみ使えます。それより前の macOS には、ほかのアプリの音を受け取る方法がありません。",
+     "beta のため、まだ足りない点があったり動かなかったりすることがあります。フィードバックをお待ちしています。",
+     "システム設定 → プライバシーとセキュリティ → 画面とシステムオーディオの録音 で BUG Clicker をオンにし、BUG Clicker を終了してもう一度起動してください。",
+     "オンなのに動かない場合は、一覧から BUG Clicker を − で削除し、BUG Clicker を再起動してからもう一度許可してください。新しい版を dmg で入れると、以前の許可が一覧に残り、今のアプリと合わなくなることがあります。",
+     "「音量」のバーが動いているか見てください。動いていなければ音を受け取れていません。イヤホンやBluetoothに切り替えた場合は「検出を再起動」を押してください。",
+     "バーは動くのにキャラクターがほとんど動かない場合は、「拍の感度」を上げてください。",
+     "バーがほとんど満たない場合は、設定 → リアクション →「音を大きく」を上げてみてください。拍を探すときだけ使い、聞こえる音はそのままです。",
+     "音は大きさだけを測り、録音や保存はしません。",
+     "それでも動かない場合は、設定 → 情報 → トラブル対処の「問題報告ファイルを作る」で作ったファイルを X @BUGnDEV に送ってください。検出・許可の状態も入ります（音やキーの内容は入りません）。"
+    ]
+   },
+   "zh": {
+    "q": "對音樂 · 遊戲聲音沒有反應",
+    "a": [
+     "Mac 的跟著聲音擺動目前是 beta，只能在 macOS 14.2 以上使用。更早的 macOS 沒有接收其他 App 聲音的方法。",
+     "由於是 beta，可能還不夠完善或無法運作。期待大家的回饋。",
+     "請在 系統設定 → 隱私權與安全性 → 螢幕與系統錄音 中開啟 BUG Clicker，然後結束 BUG Clicker 再重新啟動。",
+     "已開啟仍無效時，請在列表中用 − 移除 BUG Clicker，重新啟動 BUG Clicker 後再允許一次。用 dmg 安裝新版本時，舊的權限可能留在列表中，與目前的 App 不相符。",
+     "請看「音量」長條有沒有在動。沒有動就表示沒有收到聲音。如果換成耳機或藍牙，請按「重新啟動偵測」。",
+     "長條有動但角色幾乎不動時，請調高「節拍靈敏度」。",
+     "長條幾乎沒有填滿時，請調高 設定 → 反應 →「放大聲音」。只用來找節拍，聽到的聲音不變。",
+     "只測量聲音大小，不會錄音或儲存。",
+     "如果還是不行，請把用 設定 → 關於 → 疑難排解 的「建立問題回報檔」做出的檔案傳給 X @BUGnDEV。檔案會包含偵測與權限狀態（不含聲音或按鍵內容）。"
+    ]
+   },
+   "actions": [
+    {
+     "act": "macScreen",
+     "label": {
+      "ko": "시스템 설정 열기",
+      "en": "Open System Settings",
+      "ja": "システム設定を開く",
+      "zh": "打開系統設定"
+     }
+    },
+    {
+     "act": "restartApp",
+     "label": {
+      "ko": "BUG Clicker 다시 시작",
+      "en": "Restart BUG Clicker",
+      "ja": "BUG Clicker を再起動",
+      "zh": "重新啟動 BUG Clicker"
+     }
+    },
+    {
+     "act": "tab:react",
+     "label": {
+      "ko": "반응 설정 열기",
+      "en": "Open Reactions",
+      "ja": "リアクション設定を開く",
+      "zh": "開啟反應設定"
+     }
+    },
+    {
+     "act": "report",
+     "label": {
+      "ko": "문제 보고 파일 만들기",
+      "en": "Make a problem report file",
+      "ja": "問題報告ファイルを作る",
+      "zh": "建立問題回報檔"
+     }
+    },
+    {
+     "act": "news",
+     "label": {
+      "ko": "소식 · 문의",
+      "en": "News · Contact",
+      "ja": "お知らせ · お問い合わせ",
+      "zh": "消息 · 詢問"
+     }
+    }
+   ]
+  },
+  {
+   "id": "lost",
+   "ko": {
+    "q": "캐릭터가 화면 밖으로 사라졌어요",
+    "a": [
+     "화면 위쪽 메뉴 막대의 BUG Clicker 아이콘 → \"전부 한자리에 모으기\"를 눌러 주세요.",
+     "또는 설정 → 캐릭터 → 그 캐릭터 → \"화면 안으로 되돌리기\"를 눌러 주세요."
+    ]
+   },
+   "en": {
+    "q": "A character disappeared off the screen",
+    "a": [
+     "Click the BUG Clicker icon in the menu bar → \"Gather all in one spot\".",
+     "Or open Settings → Characters → that character → \"Bring back on screen\"."
+    ]
+   },
+   "ja": {
+    "q": "キャラクターが画面の外に消えました",
+    "a": [
+     "画面上部のメニューバーの BUG Clicker アイコン →「すべて1か所に集める」を押してください。",
+     "または 設定 → キャラクター → そのキャラクター →「画面内に戻す」を押してください。"
+    ]
+   },
+   "zh": {
+    "q": "角色跑到畫面外面不見了",
+    "a": [
+     "按螢幕上方選單列的 BUG Clicker 圖示 →「全部集中到一處」。",
+     "或是 設定 → 角色 → 該角色 →「移回畫面內」。"
+    ]
+   },
+   "actions": [
+    {
+     "act": "gather",
+     "label": {
+      "ko": "전부 한자리에 모으기",
+      "en": "Gather all in one spot",
+      "ja": "すべて1か所に集める",
+      "zh": "全部集中到一處"
+     }
+    },
+    {
+     "act": "tab:pets",
+     "label": {
+      "ko": "캐릭터 설정 열기",
+      "en": "Open Characters",
+      "ja": "キャラクター設定を開く",
+      "zh": "開啟角色設定"
+     }
+    }
+   ]
+  },
+  {
+   "id": "data",
+   "ko": {
+    "q": "캐릭터와 설정은 어디에 저장되나요?",
+    "a": [
+     "~/Library/Application Support/BUG Clicker 폴더에 저장됩니다. 아래 버튼으로 바로 열 수 있습니다.",
+     "새 버전으로 바꿔도(응용 프로그램 폴더에 덮어쓰기) 캐릭터는 그대로입니다.",
+     "앱을 휴지통에 버려도 이 폴더는 남습니다. 완전히 지우려면 이 폴더도 함께 지워 주세요."
+    ]
+   },
+   "en": {
+    "q": "Where are characters and settings saved?",
+    "a": [
+     "In the ~/Library/Application Support/BUG Clicker folder. The button below opens it.",
+     "Replacing the app with a new version (overwriting it in Applications) keeps your characters.",
+     "Moving the app to the Trash leaves this folder. To remove everything, delete this folder too."
+    ]
+   },
+   "ja": {
+    "q": "キャラクターと設定はどこに保存されますか？",
+    "a": [
+     "~/Library/Application Support/BUG Clicker フォルダーに保存されます。下のボタンで開けます。",
+     "新しいバージョンに入れ替えても（「アプリケーション」フォルダーに上書き）、キャラクターはそのままです。",
+     "アプリをゴミ箱に入れてもこのフォルダーは残ります。完全に消すには、このフォルダーも一緒に削除してください。"
+    ]
+   },
+   "zh": {
+    "q": "角色和設定儲存在哪裡？",
+    "a": [
+     "儲存在 ~/Library/Application Support/BUG Clicker 資料夾。可以用下方按鈕直接打開。",
+     "換成新版本（在「應用程式」資料夾中覆蓋）角色也會保留。",
+     "把 App 丟到垃圾桶後，這個資料夾仍會留下。若要完全刪除，請一併刪除這個資料夾。"
+    ]
+   },
+   "actions": [
+    {
+     "act": "openData",
+     "label": {
+      "ko": "데이터 폴더 열기",
+      "en": "Open data folder",
+      "ja": "データフォルダーを開く",
+      "zh": "開啟資料儲存資料夾"
+     }
+    }
+   ]
+  },
+  {
+   "id": "protected",
+   "ko": {
+    "q": "받은 캐릭터를 다른 Mac 에서도 쓰고 싶어요",
+    "a": [
+     "받은(.cvclk) 캐릭터의 그림은 그림을 함부로 꺼내 가지 못하도록, 받은 Mac · 사용자에서만 열리도록 보호되어 있습니다. (열쇠는 키체인에 둡니다)",
+     "다른 Mac에서는 데이터 폴더를 복사하는 대신, 처음 받은 .cvclk 파일을 주고받기 → 가져오기로 다시 가져와 주세요.",
+     "보낸 사람이 \"받은 사람이 다시 내보내지 못하게\"를 켜 두었다면 그 캐릭터는 다시 내보낼 수 없습니다."
+    ]
+   },
+   "en": {
+    "q": "I want to use a received character on another Mac",
+    "a": [
+     "Images of received (.cvclk) characters are protected so they open only on the Mac and user that received them, to keep the art from being taken out. (The key is kept in Keychain.)",
+     "On another Mac, instead of copying the data folder, import the original .cvclk file again via Share → Import.",
+     "If the sender turned on \"Prevent recipients from re-exporting\", that character cannot be exported again."
+    ]
+   },
+   "ja": {
+    "q": "受け取ったキャラクターを別の Mac でも使いたい",
+    "a": [
+     "受け取った（.cvclk）キャラクターの画像は、勝手に取り出されないよう、受け取った Mac · ユーザーでのみ開けるよう保護されています。（鍵はキーチェーンに保存）",
+     "ほかのMacでは、データフォルダーをコピーする代わりに、最初に受け取った .cvclk ファイルを 共有 → インポート で取り込み直してください。",
+     "送った人が「受け取った人が再エクスポートできないようにする」をオンにしている場合、そのキャラクターは再エクスポートできません。"
+    ]
+   },
+   "zh": {
+    "q": "想在其他 Mac 上使用收到的角色",
+    "a": [
+     "收到的（.cvclk）角色圖片受到保護，只能在收到它的 Mac · 使用者中開啟，以防止圖片被隨意取出。（鑰匙存放在鑰匙圈）",
+     "在其他Mac上，請不要複製資料夾，而是用 分享 → 匯入 重新匯入最初收到的 .cvclk 檔。",
+     "如果傳送者開啟了「不讓收件人再次匯出」，該角色就無法再次匯出。"
+    ]
+   },
+   "actions": [
+    {
+     "act": "tab:import",
+     "label": {
+      "ko": "주고받기 열기",
+      "en": "Open Share",
+      "ja": "共有を開く",
+      "zh": "開啟分享"
+     }
+    }
+   ]
+  },
+  {
+   "id": "obs",
+   "ko": {
+    "q": "OBS로 방송 · 녹화할 때 캐릭터가 까맣게 나와요",
+    "a": [
+     "OBS의 \"창 캡처\"는 투명한 창의 빈 곳을 까맣게 찍습니다. BUG Clicker 캐릭터 창은 캐릭터 둘레가 투명해서 그렇게 보입니다.",
+     "바탕을 지우려면: 바탕화면 캐릭터 우클릭 → \"촬영 관련\" → \"방송용 배경색 (OBS)\"에서 초록을 고르고, OBS 소스에 \"색상 키\" 필터를 초록으로 넣으면 캐릭터만 남습니다. 다 쓰면 같은 메뉴에서 \"끄기\"를 눌러 주세요.",
+     "가장 간단한 방법은 \"macOS 화면 캡처\"로 화면을 찍고 Option을 누른 채 테두리를 끌어 캐릭터 부분만 남기는 것입니다. 이 방법은 바탕화면도 함께 보입니다.",
+     "앱 안의 촬영(PNG · GIF)은 이 설정과 상관없이 투명 · 어둡게 · 바탕화면 중에 고른 대로 찍힙니다."
+    ]
+   },
+   "en": {
+    "q": "The character looks black when streaming or recording with OBS",
+    "a": [
+     "OBS \"Window Capture\" records the empty parts of a transparent window as black. BUG Clicker character windows are transparent around the character, so they look black.",
+     "To remove the background: right-click the desktop character → \"Capture\" → \"Broadcast background (OBS)\" → Green, then add a \"Color Key\" filter set to green to the OBS source. Only the character will remain. Choose \"Off\" in the same menu when you're done.",
+     "The simplest way is to capture the screen with \"macOS Screen Capture\" and drag the edges while holding Option to keep only the character. The desktop shows as well this way.",
+     "In-app captures (PNG · GIF) are not affected and use the background you chose (transparent · dark · desktop)."
+    ]
+   },
+   "ja": {
+    "q": "OBS で配信・録画するとキャラクターが黒く映ります",
+    "a": [
+     "OBS の「ウィンドウキャプチャ」は、透明なウィンドウの空いた部分を黒く写します。BUG Clicker のキャラクターウィンドウはキャラクターの周りが透明なため、黒く見えます。",
+     "背景を消すには：デスクトップのキャラクターを右クリック →「撮影関連」→「配信用の背景色 (OBS)」で緑を選び、OBS のソースに「カラーキー」フィルターを緑で追加すると、キャラクターだけが残ります。使い終わったら同じメニューで「オフ」を選んでください。",
+     "いちばん簡単なのは「macOS 画面キャプチャ」で画面を撮り、option を押しながら枠をドラッグしてキャラクター部分だけを残す方法です。この方法ではデスクトップも一緒に映ります。",
+     "アプリ内の撮影（PNG · GIF）はこの設定に関係なく、選んだ背景（透明 · 暗く · デスクトップ）で撮れます。"
+    ]
+   },
+   "zh": {
+    "q": "用 OBS 直播或錄影時角色變成黑色",
+    "a": [
+     "OBS 的「視窗擷取」會把透明視窗的空白處拍成黑色。BUG Clicker 的角色視窗在角色周圍是透明的，所以看起來是黑的。",
+     "要去掉背景：在桌面角色上按右鍵 →「拍攝相關」→「直播用背景色 (OBS)」選擇綠色，再在 OBS 來源加入綠色的「色彩鍵」濾鏡，就只會留下角色。用完後請在同一個選單選「關閉」。",
+     "最簡單的方法是用「macOS 螢幕擷取」拍下畫面，按住 Option 拖曳邊框只留下角色部分。這個方法也會拍到桌面。",
+     "App 內的拍攝（PNG · GIF）不受這個設定影響，會依你選的背景（透明 · 暗色 · 桌面）拍攝。"
+    ]
+   }
+  },
+  {
+   "id": "smartscreen",
+   "ko": {
+    "q": "처음 열 때 \"악성 코드가 없음을 확인할 수 없습니다\" 창이 떠요",
+    "a": [
+     "\"Apple은 'BUG Clicker.app'에 사용자의 Mac에 손상을 입히거나 사용자의 개인정보에 침입할 수 있는 악성 코드가 없음을 확인할 수 없습니다.\"는 Apple 개발자 서명을 하지 않은 시험판이라 뜨는 안내입니다.",
+     "macOS 15 이상: 창에서 \"완료\"를 누른 뒤, 시스템 설정 → 개인정보 보호 및 보안으로 가서 아래쪽 \"보안\" 칸의 \"확인 없이 열기\"를 누릅니다. 한 번 더 묻는 창에서도 \"확인 없이 열기\"를 누르고 암호(또는 Touch ID)를 넣으면 열립니다.",
+     "macOS 14 이하: Finder에서 BUG Clicker를 Control+클릭 → 열기 → 열기를 눌러 주세요.",
+     "한 번 열고 나면 다음부터는 묻지 않습니다. 자동 업데이트(패치)로 바뀔 때도 다시 묻지 않습니다.",
+     "공식 내려받기 링크에서 받은 파일인지는 릴리스 설명 맨 아래의 SHA-256 지문으로 확인하실 수 있습니다."
+    ]
+   },
+   "en": {
+    "q": "\"Apple could not verify… free of malware\" appears on first launch",
+    "a": [
+     "\"Apple could not verify 'BUG Clicker.app' is free of malware that may harm your Mac or compromise your privacy.\" appears because this test build is not signed with an Apple developer certificate.",
+     "macOS 15 or later: click \"Done\", then go to System Settings → Privacy & Security and click \"Open Anyway\" in the Security section near the bottom. Click \"Open Anyway\" again in the next dialog and enter your password (or use Touch ID).",
+     "macOS 14 or earlier: in Finder, Control-click BUG Clicker → Open → Open.",
+     "Once opened, it won't ask again, not even after automatic updates (patches).",
+     "You can confirm the file came from the official download link with the SHA-256 fingerprint at the bottom of the release notes."
+    ]
+   },
+   "ja": {
+    "q": "初回起動時に「マルウェアが含まれていないことを検証できませんでした」と表示されます",
+    "a": [
+     "「Apple は、\"BUG Clicker.app\" に Mac に損害を与えたりプライバシーを侵害したりする可能性のあるマルウェアが含まれていないことを検証できませんでした。」は、Apple の開発者署名をしていない試験版のため表示されます。",
+     "macOS 15 以降：「完了」を押してから システム設定 → プライバシーとセキュリティ を開き、下のほうの「セキュリティ」欄の「このまま開く」を押します。もう一度表示される画面でも「このまま開く」を押し、パスワード（または Touch ID）を入れると開きます。",
+     "macOS 14 以前：Finder で BUG Clicker を control+クリック → 開く → 開く を押してください。",
+     "一度開けば、次からは聞かれません。自動アップデート（パッチ）のあとも聞かれません。",
+     "公式ダウンロードリンクから受け取ったファイルかどうかは、リリース説明の一番下にある SHA-256 で確認できます。"
+    ]
+   },
+   "zh": {
+    "q": "第一次開啟時出現「無法驗證…不含惡意軟體」",
+    "a": [
+     "「Apple 無法驗證 \"BUG Clicker.app\" 不含可能損害 Mac 或危害隱私的惡意軟體。」是因為測試版沒有 Apple 開發者簽署而出現的提示。",
+     "macOS 15 以上：按「完成」後，前往 系統設定 → 隱私權與安全性，在下方「安全性」區塊按「強制打開」。再次出現的視窗中也按「強制打開」，輸入密碼（或使用 Touch ID）即可開啟。",
+     "macOS 14 以下：在 Finder 中 Control+點按 BUG Clicker → 打開 → 打開。",
+     "開啟過一次之後就不會再詢問，自動更新（修補）後也不會。",
+     "可以用發行說明最下方的 SHA-256 指紋確認檔案是否來自官方下載連結。"
+    ]
+   },
+   "actions": [
+    {
+     "act": "macSecurity",
+     "label": {
+      "ko": "개인정보 보호 및 보안 열기",
+      "en": "Open Privacy & Security",
+      "ja": "プライバシーとセキュリティを開く",
+      "zh": "打開隱私權與安全性"
+     }
+    }
+   ]
+  },
+  {
+   "id": "nostart",
+   "ko": {
+    "q": "BUG Clicker를 눌러도 아무것도 뜨지 않아요",
+    "a": [
+     "처음 열 때는 \"확인할 수 없습니다\" 창이 먼저 뜹니다. 위의 \"처음 열 때 … 창이 떠요\" 질문대로 \"확인 없이 열기\"를 눌러 주세요.",
+     "캐릭터는 화면 오른쪽 아래 근처에 뜹니다. 화면 위쪽 메뉴 막대에 BUG Clicker 아이콘이 있는지도 봐 주세요. 노치가 있는 MacBook은 아이콘이 많으면 노치 뒤에 가려질 수 있습니다.",
+     "그래도 안 되면 ⌘ + Option + Esc에서 BUG Clicker를 강제 종료한 뒤 다시 켜 주세요. 켜다가 오류가 나면 알림 창이 뜨고 startup-error.log 파일이 데이터 폴더에 남습니다. 문의하실 때 그 파일을 함께 보내 주세요.",
+     "켜지는 상태라면 설정 → 정보 → 문제 해결의 \"문제 보고 파일 만들기\"로 만든 zip을 보내 주셔도 됩니다."
+    ]
+   },
+   "en": {
+    "q": "Nothing appears when I open BUG Clicker",
+    "a": [
+     "On first launch the \"could not verify\" dialog appears first. Follow the first-launch question above and click \"Open Anyway\".",
+     "The character appears near the bottom right of the screen. Also look for the BUG Clicker icon in the menu bar at the top. On MacBooks with a notch, the icon may hide behind the notch when there are many icons.",
+     "If it still doesn't work, force quit BUG Clicker with ⌘ + Option + Esc and open it again. If an error occurs while starting, a message appears and startup-error.log is saved in the data folder. Please send that file with your inquiry.",
+     "If the app does open, you can also send the zip made with Settings → About → Troubleshooting → \"Make a problem report file\"."
+    ]
+   },
+   "ja": {
+    "q": "BUG Clicker を開いても何も表示されません",
+    "a": [
+     "初回は「検証できませんでした」の画面が先に出ます。上の初回起動の質問のとおり「このまま開く」を押してください。",
+     "キャラクターは画面の右下あたりに表示されます。画面上部のメニューバーに BUG Clicker のアイコンがあるかも確認してください。ノッチのある MacBook では、アイコンが多いとノッチの後ろに隠れることがあります。",
+     "それでも表示されない場合は、⌘ + option + esc で BUG Clicker を強制終了してから起動し直してください。起動中にエラーが起きるとお知らせが表示され、データフォルダーに startup-error.log が残ります。お問い合わせの際にそのファイルも送ってください。",
+     "起動できる状態なら、設定 → 情報 → トラブル対処の「問題報告ファイルを作る」で作った zip を送っていただいても構いません。"
+    ]
+   },
+   "zh": {
+    "q": "打開 BUG Clicker 後什麼都沒有出現",
+    "a": [
+     "第一次開啟時會先出現「無法驗證」視窗。請依照上方第一次開啟的問題按「強制打開」。",
+     "角色會出現在螢幕右下角附近。也請確認螢幕上方的選單列中是否有 BUG Clicker 圖示。有瀏海的 MacBook 若圖示太多，可能會被瀏海遮住。",
+     "如果還是不行，請用 ⌘ + Option + Esc 強制結束 BUG Clicker 後再重新開啟。啟動時若發生錯誤，會出現通知並在資料夾中留下 startup-error.log。詢問時請一併附上該檔案。",
+     "若程式可以開啟，也可以傳送在 設定 → 關於 → 疑難排解 中用「建立問題回報檔」做出的 zip。"
+    ]
+   },
+   "actions": [
+    {
+     "act": "openData",
+     "label": {
+      "ko": "데이터 폴더 열기",
+      "en": "Open data folder",
+      "ja": "データフォルダを開く",
+      "zh": "開啟資料夾"
+     }
+    }
+   ]
+  },
+  {
+   "id": "black",
+   "ko": {
+    "q": "캐릭터 꾸미기 · 대사 편집 창이 검게 나오거나 바로 닫혀요",
+    "a": [
+     "설정 → 정보 → 문제 해결에서 \"그래픽 가속 끄기\"를 켜고 다시 시작해 주세요. 꺼도 캐릭터 · 말풍선은 그대로 보입니다.",
+     "그래도 같으면 캐릭터 그림이 아주 큰지(긴 변 4000px 넘음 등) 확인해 주세요.",
+     "그래도 안 되면 설정 → 정보 → 문제 해결의 \"문제 보고 파일 만들기\"로 만든 파일을 X @BUGnDEV로 보내 주세요. 어떤 이유로 멈췄는지 함께 담깁니다."
+    ]
+   },
+   "en": {
+    "q": "Character Studio or the Line Editor opens black or closes right away",
+    "a": [
+     "Turn on \"Turn off graphics acceleration\" in Settings → About → Troubleshooting, then restart. Characters and bubbles still show as before.",
+     "If it persists, check whether the character images are very large (over 4000px on the long side, for example).",
+     "If nothing helps, make a file with \"Create problem report\" in Settings → About → Troubleshooting and send it to X @BUGnDEV. It includes why the window stopped."
+    ]
+   },
+   "ja": {
+    "q": "キャラクター設定 · セリフ編集のウィンドウが黒い、またはすぐ閉じます",
+    "a": [
+     "設定 → 情報 → トラブル対処で「グラフィックアクセラレーションをオフ」をオンにして再起動してください。オフにしてもキャラクターや吹き出しはそのまま表示されます。",
+     "それでも同じなら、キャラクター画像がとても大きくないか（長辺 4000px 超など）確認してください。",
+     "それでも直らない場合は、設定 → 情報 → トラブル対処の「問題報告ファイルを作る」で作ったファイルを X @BUGnDEV に送ってください。止まった理由も一緒に入ります。"
+    ]
+   },
+   "zh": {
+    "q": "角色自定義 · 台詞編輯視窗變黑或立即關閉",
+    "a": [
+     "請在設定 → 關於 → 疑難排解中開啟「關閉圖形加速」，然後重新啟動。關閉後角色與對話框仍會正常顯示。",
+     "若仍相同，請確認角色圖片是否非常大（例如長邊超過 4000px）。",
+     "若仍無法解決，請用 設定 → 關於 → 疑難排解 的「建立問題回報檔」建立檔案，傳送到 X @BUGnDEV。檔案中也會記錄停止的原因。"
+    ]
+   }
+  }
+ ],
+ "addFirst": [
+  {
+   "id": "smartscreen",
+   "ko": {
+    "q": "처음 열 때 \"악성 코드가 없음을 확인할 수 없습니다\" 창이 떠요",
+    "a": [
+     "\"Apple은 'BUG Clicker.app'에 사용자의 Mac에 손상을 입히거나 사용자의 개인정보에 침입할 수 있는 악성 코드가 없음을 확인할 수 없습니다.\"는 Apple 개발자 서명을 하지 않은 시험판이라 뜨는 안내입니다.",
+     "macOS 15 이상: 창에서 \"완료\"를 누른 뒤, 시스템 설정 → 개인정보 보호 및 보안으로 가서 아래쪽 \"보안\" 칸의 \"확인 없이 열기\"를 누릅니다. 한 번 더 묻는 창에서도 \"확인 없이 열기\"를 누르고 암호(또는 Touch ID)를 넣으면 열립니다.",
+     "macOS 14 이하: Finder에서 BUG Clicker를 Control+클릭 → 열기 → 열기를 눌러 주세요.",
+     "한 번 열고 나면 다음부터는 묻지 않습니다. 자동 업데이트(패치)로 바뀔 때도 다시 묻지 않습니다.",
+     "공식 내려받기 링크에서 받은 파일인지는 릴리스 설명 맨 아래의 SHA-256 지문으로 확인하실 수 있습니다."
+    ]
+   },
+   "en": {
+    "q": "\"Apple could not verify… free of malware\" appears on first launch",
+    "a": [
+     "\"Apple could not verify 'BUG Clicker.app' is free of malware that may harm your Mac or compromise your privacy.\" appears because this test build is not signed with an Apple developer certificate.",
+     "macOS 15 or later: click \"Done\", then go to System Settings → Privacy & Security and click \"Open Anyway\" in the Security section near the bottom. Click \"Open Anyway\" again in the next dialog and enter your password (or use Touch ID).",
+     "macOS 14 or earlier: in Finder, Control-click BUG Clicker → Open → Open.",
+     "Once opened, it won't ask again, not even after automatic updates (patches).",
+     "You can confirm the file came from the official download link with the SHA-256 fingerprint at the bottom of the release notes."
+    ]
+   },
+   "ja": {
+    "q": "初回起動時に「マルウェアが含まれていないことを検証できませんでした」と表示されます",
+    "a": [
+     "「Apple は、\"BUG Clicker.app\" に Mac に損害を与えたりプライバシーを侵害したりする可能性のあるマルウェアが含まれていないことを検証できませんでした。」は、Apple の開発者署名をしていない試験版のため表示されます。",
+     "macOS 15 以降：「完了」を押してから システム設定 → プライバシーとセキュリティ を開き、下のほうの「セキュリティ」欄の「このまま開く」を押します。もう一度表示される画面でも「このまま開く」を押し、パスワード（または Touch ID）を入れると開きます。",
+     "macOS 14 以前：Finder で BUG Clicker を control+クリック → 開く → 開く を押してください。",
+     "一度開けば、次からは聞かれません。自動アップデート（パッチ）のあとも聞かれません。",
+     "公式ダウンロードリンクから受け取ったファイルかどうかは、リリース説明の一番下にある SHA-256 で確認できます。"
+    ]
+   },
+   "zh": {
+    "q": "第一次開啟時出現「無法驗證…不含惡意軟體」",
+    "a": [
+     "「Apple 無法驗證 \"BUG Clicker.app\" 不含可能損害 Mac 或危害隱私的惡意軟體。」是因為測試版沒有 Apple 開發者簽署而出現的提示。",
+     "macOS 15 以上：按「完成」後，前往 系統設定 → 隱私權與安全性，在下方「安全性」區塊按「強制打開」。再次出現的視窗中也按「強制打開」，輸入密碼（或使用 Touch ID）即可開啟。",
+     "macOS 14 以下：在 Finder 中 Control+點按 BUG Clicker → 打開 → 打開。",
+     "開啟過一次之後就不會再詢問，自動更新（修補）後也不會。",
+     "可以用發行說明最下方的 SHA-256 指紋確認檔案是否來自官方下載連結。"
+    ]
+   },
+   "actions": [
+    {
+     "act": "macSecurity",
+     "label": {
+      "ko": "개인정보 보호 및 보안 열기",
+      "en": "Open Privacy & Security",
+      "ja": "プライバシーとセキュリティを開く",
+      "zh": "打開隱私權與安全性"
+     }
+    }
+   ]
+  },
+  {
+   "id": "menubar",
+   "ko": {
+    "q": "BUG Clicker 아이콘이 어디 있나요?",
+    "a": [
+     "Dock이 아니라 화면 위쪽 오른쪽 메뉴 막대에 있습니다.",
+     "메뉴 막대에 아이콘이 많아 가려졌다면, 캐릭터를 오른쪽 클릭해 같은 메뉴를 쓸 수 있습니다.",
+     "설정 · 캐릭터 꾸미기 같은 창을 열어 두는 동안에는 Dock 에도 보입니다."
+    ]
+   },
+   "en": {
+    "q": "Where is the BUG Clicker icon?",
+    "a": [
+     "It is in the menu bar at the top right of the screen, not in the Dock.",
+     "If too many icons hide it, right-click a character to use the same menu.",
+     "While windows such as Settings or Character Studio are open, it also appears in the Dock."
+    ]
+   },
+   "ja": {
+    "q": "BUG Clicker のアイコンはどこですか？",
+    "a": [
+     "Dock ではなく、画面右上のメニューバーにあります。",
+     "メニューバーのアイコンが多くて隠れている場合は、キャラクターを右クリックして同じメニューを使えます。",
+     "設定・キャラクター設定などのウィンドウを開いている間は、Dock にも表示されます。"
+    ]
+   },
+   "zh": {
+    "q": "BUG Clicker 圖示在哪裡？",
+    "a": [
+     "不在 Dock，而是在螢幕右上方的選單列。",
+     "如果選單列圖示太多被遮住，可以在角色上按右鍵使用相同的選單。",
+     "開著設定 · 角色自定義等視窗時，也會出現在 Dock。"
+    ]
+   }
+  },
+  {
+   "id": "screen",
+   "ko": {
+    "q": "촬영하기가 안 되거나 권한을 묻는 창이 떠요",
+    "a": [
+     "시스템 설정 → 개인정보 보호 및 보안 → 화면 및 시스템 오디오 녹음에서 BUG Clicker를 켜 주세요.",
+     "켜져 있는데도 안 되면 목록에서 BUG Clicker를 − 로 지운 뒤 BUG Clicker를 다시 시작하고, 다시 허용해 주세요. 새 버전을 dmg로 받으면 예전 허용이 목록에 남아 지금 앱과 맞지 않을 수 있습니다.",
+     "켠 뒤에는 BUG Clicker를 종료했다가 다시 켜야 적용됩니다.",
+     "바탕화면은 촬영하는 순간 고른 범위만 찍으며, 따로 저장하거나 보내지 않습니다."
+    ]
+   },
+   "en": {
+    "q": "Taking a shot doesn't work or asks for permission",
+    "a": [
+     "Turn on BUG Clicker in System Settings → Privacy & Security → Screen & System Audio Recording.",
+     "If it still doesn't work while turned on, remove BUG Clicker from the list with −, restart BUG Clicker and allow it again. After installing a new dmg, the old permission can stay in the list and no longer match the current app.",
+     "After turning it on, quit BUG Clicker and open it again for it to take effect.",
+     "Only the chosen area of the desktop is captured at that moment; nothing else is saved or sent."
+    ]
+   },
+   "ja": {
+    "q": "撮影できない、または許可を求められます",
+    "a": [
+     "システム設定 → プライバシーとセキュリティ → 画面とシステムオーディオの録音 で BUG Clicker をオンにしてください。",
+     "オンなのに動かない場合は、一覧から BUG Clicker を − で削除し、BUG Clicker を再起動してからもう一度許可してください。新しい版を dmg で入れると、以前の許可が一覧に残り、今のアプリと合わなくなることがあります。",
+     "オンにしたあと、BUG Clicker を終了してもう一度起動すると適用されます。",
+     "デスクトップは撮影した瞬間に選んだ範囲だけを撮り、ほかに保存したり送ったりしません。"
+    ]
+   },
+   "zh": {
+    "q": "無法拍攝或出現詢問權限的視窗",
+    "a": [
+     "請在 系統設定 → 隱私權與安全性 → 螢幕與系統錄音 中開啟 BUG Clicker。",
+     "已開啟仍無效時，請在列表中用 − 移除 BUG Clicker，重新啟動 BUG Clicker 後再允許一次。用 dmg 安裝新版本時，舊的權限可能留在列表中，與目前的 App 不相符。",
+     "開啟後，需要結束 BUG Clicker 再重新啟動才會生效。",
+     "只會在拍攝的瞬間拍下所選範圍的桌面，不會另外儲存或傳送。"
+    ]
+   },
+   "actions": [
+    {
+     "act": "macScreen",
+     "label": {
+      "ko": "시스템 설정 열기",
+      "en": "Open System Settings",
+      "ja": "システム設定を開く",
+      "zh": "打開系統設定"
+     }
+    },
+    {
+     "act": "restartApp",
+     "label": {
+      "ko": "BUG Clicker 다시 시작",
+      "en": "Restart BUG Clicker",
+      "ja": "BUG Clicker を再起動",
+      "zh": "重新啟動 BUG Clicker"
+     }
+    }
+   ]
+  },
+  {
+   "id": "keychain",
+   "ko": {
+    "q": "\"키체인\" 암호를 묻는 창이 떠요",
+    "a": [
+     "받은 캐릭터 그림을 이 Mac 에서만 열리도록 잠그는 열쇠를 키체인에 둡니다. 그 열쇠를 꺼낼 때 mac이 묻는 창입니다.",
+     "로그인 암호를 넣고 \"항상 허용\"을 눌러 주세요. 새 버전을 새로 깔면 한 번 더 물을 수 있습니다.",
+     "\"거부\"를 누르면 이번에는 받은 캐릭터의 그림이 보이지 않을 수 있습니다. 다시 켜면 또 묻습니다."
+    ]
+   },
+   "en": {
+    "q": "A window asks for my Keychain password",
+    "a": [
+     "The key that locks received character images to this Mac is kept in Keychain. macOS asks when the app reads that key.",
+     "Enter your login password and click \"Always Allow\". It may ask once more after installing a new version.",
+     "If you click \"Deny\", received characters may not show their images this time. It asks again next launch."
+    ]
+   },
+   "ja": {
+    "q": "「キーチェーン」のパスワードを求められます",
+    "a": [
+     "受け取ったキャラクター画像をこの Mac でだけ開けるようにする鍵を、キーチェーンに保存しています。その鍵を取り出すときに mac が確認する画面です。",
+     "ログインパスワードを入力して「常に許可」を押してください。新しいバージョンを入れ直すと、もう一度聞かれることがあります。",
+     "「拒否」を押すと、今回は受け取ったキャラクターの画像が表示されないことがあります。次に起動するとまた聞かれます。"
+    ]
+   },
+   "zh": {
+    "q": "出現詢問「鑰匙圈」密碼的視窗",
+    "a": [
+     "讓收到的角色圖片只能在這台 Mac 上開啟的鑰匙存放在鑰匙圈。這是 mac 在取出鑰匙時詢問的視窗。",
+     "輸入登入密碼並按「永遠允許」。重新安裝新版本後可能會再問一次。",
+     "如果按「拒絕」，這次收到的角色圖片可能不會顯示。下次啟動時會再詢問。"
+    ]
+   }
+  }
+ ]
+}

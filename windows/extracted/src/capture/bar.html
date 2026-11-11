@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline' 'self'; font-src 'self' data:; script-src 'self'">
+<title>BUG Clicker · 촬영</title>
+<link rel="stylesheet" href="../ui/fonts.css">
+<link rel="stylesheet" href="../settings/settings.css">
+<link rel="stylesheet" href="bar.css">
+<script src="../ui/theme.js"></script>
+</head>
+<body>
+<div class="cb" id="cb">
+  
+  <div class="cb__hd">
+    <span class="cb__grip" aria-hidden="true"></span>
+    <button type="button" class="cb__back" id="back" aria-label="뒤로" hidden>‹</button>
+    <img class="cb__logo" src="../../assets/clicker-logo.png" alt="">
+    <b id="title">촬영 모드</b>
+    <button type="button" class="cb__x" id="close" aria-label="닫기">×</button>
+  </div>
+
+  <div class="cb__bd">
+    
+    <div id="stepChoose">
+      <div class="cb__lbl">무엇을 찍을까요?</div>
+      <div class="cb__tiles">
+        <button type="button" class="cb__tile" data-mode="png"><span class="cb__ic">PNG</span><b>사진</b><i>한 장 · 투명 가능</i></button>
+        <button type="button" class="cb__tile" data-mode="gif"><span class="cb__ic">GIF</span><b>움짤</b><i>짧은 녹화</i></button>
+      </div>
+    </div>
+
+    
+    <div id="stepSet" hidden>
+      <div id="poseBox">
+        <div class="cb__lbl">모습</div>
+        <div class="seg" id="segPose"><button data-v="normal">그대로</button><button data-v="pressed">눌린 모습</button><button data-v="bubble">말풍선</button></div>
+      </div>
+      <div class="cb__lbl">비율</div>
+      <div class="cb__ratio" id="segRatio">
+        <button type="button" data-v="square"><i style="width:15px;height:15px"></i>정사각형</button>
+        <button type="button" data-v="free"><i style="width:20px;height:13px"></i>자유</button>
+        <button type="button" data-v="wide"><i style="width:23px;height:13px"></i>가로 16:9</button>
+        <button type="button" data-v="area"><i class="is-dash" style="width:18px;height:14px"></i>직접 정하기</button>
+      </div>
+      <div class="cb__area" id="areaRow" hidden>
+        <span id="areaTxt">끌어서 정한 범위로 찍습니다.</span>
+        <button type="button" class="btn btn--sm btn--ghost" id="areaAgain">범위 다시 정하기</button>
+      </div>
+      <div id="lenBox">
+        <div class="cb__lbl">길이</div>
+        <div class="seg" id="segLen"><button data-v="3">3초</button><button data-v="5">5초</button></div>
+      </div>
+      <div class="cb__lbl">바탕</div>
+      <div class="seg" id="segBg"><button data-v="clear">투명</button><button data-v="dark">어둡게</button><button data-v="desk">바탕화면</button></div>
+      <div id="outBox">
+        <div class="cb__lbl">저장</div>
+        <div class="seg" id="segOut"><button data-v="gif">GIF</button><button data-v="frames">GIF + PNG 프레임</button></div>
+      </div>
+      <div class="cb__note" id="note"></div>
+    </div>
+
+    
+    <div class="cb__cnt" id="cnt"></div>
+
+    <button type="button" class="cb__go" id="go" hidden></button>
+
+    
+    <div class="cb__rec" id="rec" hidden>
+      <span class="cb__big" id="big"></span>
+      <div class="cb__bar"><i id="prog"></i></div>
+      <span class="cb__recl" id="recl"></span>
+      <button type="button" class="btn btn--sm btn--ghost" id="stop">취소</button>
+    </div>
+
+    <div class="cb__dir" id="dirRow">
+      <span class="cb__lbl2">저장 위치</span>
+      <span class="cb__path" id="dir" translate="no"></span>
+      <button type="button" class="btn btn--sm btn--ghost" id="dirPick">폴더 바꾸기</button>
+      <button type="button" class="btn btn--sm btn--ghost" id="dirReset">기본</button>
+    </div>
+  </div>
+</div>
+<script src="../ui/i18n-dict.js"></script>
+<script src="../ui/i18n-zhcn.js"></script>
+<script src="../ui/i18n.js"></script>
+<script src="../ui/kit.js"></script>
+<script src="bar.js"></script>
+</body>
+</html>

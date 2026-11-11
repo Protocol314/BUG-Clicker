@@ -1,0 +1,1 @@
+"use strict";function nextPosition(n,t){if(!n||!t)return null;return[n.wx,n.wy,n.cx,n.cy,t.x,t.y].some((n=>!Number.isFinite(n)))?null:{x:Math.round(n.wx+(t.x-n.cx)),y:Math.round(n.wy+(t.y-n.cy))}}module.exports={nextPosition:nextPosition};

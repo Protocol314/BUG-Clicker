@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline' 'self'; font-src 'self' data:; script-src 'self'">
+<title>BUG Clicker</title>
+<link rel="stylesheet" href="../ui/fonts.css">
+<link rel="stylesheet" href="../settings/settings.css">
+<link rel="stylesheet" href="../guide/guide.css">
+<link rel="stylesheet" href="intro.css">
+<script src="../ui/theme.js"></script>
+</head>
+<body>
+<div id="app">
+  <header class="appbar">
+    <div class="appbar__row drag">
+      <img class="brand__logo" src="../../assets/clicker-logo.png" alt="">
+      <span class="appbar__brand">BUG</span>
+      <span class="brand__sub">시작하기 전에</span>
+    </div>
+    <div class="gd-langbar">
+      <div class="seg gd-lang" id="langPick" translate="no" aria-label="Language">
+        <button data-v="ko">한국어</button>
+        <button data-v="en">English</button>
+        <button data-v="ja">日本語</button>
+        <button data-v="zh">繁體中文</button>
+        <button data-v="zhcn">简体中文</button>
+      </div>
+    </div>
+  </header>
+  <main class="it">
+    <div class="it-head">
+      <span class="it-tag">안내</span>
+      <h1>BUG Clicker 를 시작하기 전에</h1>
+    </div>
+    <section class="it-card">
+      <div class="it-row">
+        <b class="it-k">만든 방식</b>
+        <p class="it-strong">Manual + Vibe(AI 서포트)로 만들었습니다.</p>
+        <p class="it-sub">코드는 직접 정하고 작성하며(Manual), 프로그램을 잇는 부분에서 AI 의 도움(Vibe)을 받고 있습니다.</p>
+      </div>
+      <div class="it-row">
+        <b class="it-k">그림 · 정보</b>
+        <p class="it-strong">넣으신 그림은 AI 에 쓰이지 않습니다.</p>
+        <p class="it-strong">업데이트를 받아 올 뿐, 사용자 정보를 따로 받지 않습니다.</p>
+      </div>
+      <div class="it-row it-row--link">
+        <p class="it-sub">자세한 내용은 X 의 안내 글에서 볼 수 있습니다.</p>
+        <button class="btn btn--sm" id="more" type="button">안내 글 열기</button>
+      </div>
+    </section>
+    <label class="it-check">
+      <input type="checkbox" id="ok">
+      <span class="it-box" aria-hidden="true"></span>
+      <span>위 내용을 확인했습니다</span>
+    </label>
+    <p class="gd-ai it-ai" id="aiNote" hidden>English · 日本語 · 繁體中文 · 简体中文 화면은 AI 기반 기계 번역입니다.</p>
+  </main>
+  <footer class="gd-foot">
+    <button id="quit" class="btn btn--ghost btn--sm" type="button">끄기</button>
+    <span class="gd-gap"></span>
+    <button id="go" class="btn btn--accent" type="button" disabled>시작하기</button>
+  </footer>
+</div>
+<script src="../ui/i18n-dict.js"></script>
+<script src="../ui/i18n-zhcn.js"></script>
+<script src="../ui/i18n.js"></script>
+<script src="intro.js"></script>
+</body>
+</html>

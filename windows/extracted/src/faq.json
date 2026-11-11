@@ -1,0 +1,754 @@
+[
+  {
+    "id": "typing",
+    "ko": {
+      "q": "타자에 반응하지 않아요",
+      "a": [
+        "설정 → 반응에서 그 캐릭터의 \"타자에 맞춰 움직이기\"가 켜져 있는지 확인해 주세요. 아래 \"타자 감지\" 줄에 안 되는 이유가 적혀 있습니다.",
+        "\"백신 프로그램이 막았을 수 있습니다\": 백신에서 BUG-Clicker.exe를 예외로 등록해 주세요. 키보드를 누른 순간만 알고, 어떤 키인지는 읽지 않습니다.",
+        "\"보안 정책\" · \"제한 모드\": 회사 · 학교처럼 관리되는 PC에서는 타자 감지를 쓸 수 없습니다.",
+        "관리자 권한으로 실행한 프로그램(일부 게임)이 앞에 있으면 Windows가 키 입력을 알려 주지 않습니다. 그 안에서도 반응하게 하려면 BUG Clicker도 관리자 권한으로 실행해 주세요.",
+        "그래도 안 되면 설정 → 반응 → \"감지 다시 시작\"을 눌러 주세요."
+      ]
+    },
+    "en": {
+      "q": "It doesn't react to typing",
+      "a": [
+        "Check that \"Move to typing\" is on for that character in Settings → Reactions. The \"Typing detection\" line below shows why it isn't working.",
+        "\"Your antivirus may have blocked it\": add BUG-Clicker.exe to your antivirus exceptions. It only knows when a key is pressed, never which key.",
+        "\"Security policy\" · \"restricted mode\": typing detection can't be used on managed PCs such as work or school computers.",
+        "When a program running as administrator (some games) is in front, Windows does not pass keyboard input along. To react there too, run BUG Clicker as administrator as well.",
+        "If it still doesn't work, press Settings → Reactions → \"Restart detection\"."
+      ]
+    },
+    "ja": {
+      "q": "タイピングに反応しません",
+      "a": [
+        "設定 → リアクションで、そのキャラクターの「タイピングに合わせて動く」がオンか確認してください。下の「タイピングの検出」の行に、動かない理由が表示されます。",
+        "「ウイルス対策ソフトがブロックした可能性があります」。ウイルス対策ソフトで BUG-Clicker.exe を除外に登録してください。キーを押した瞬間だけを知り、どのキーかは読みません。",
+        "「セキュリティポリシー」「制限モード」。会社や学校などの管理されたPCでは、タイピングの検出は使えません。",
+        "管理者として実行したプログラム（一部のゲーム）が前面にあると、Windowsはキー入力を伝えません。その中でも反応させたい場合は、BUG Clickerも管理者として実行してください。",
+        "それでも動かない場合は、設定 → リアクション →「検出を再起動」を押してください。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "tab:react",
+        "label": {
+          "ko": "반응 설정 열기",
+          "en": "Open Reactions",
+          "ja": "リアクション設定を開く",
+          "zh": "開啟反應設定"
+        }
+      },
+      {
+        "act": "restart",
+        "label": {
+          "ko": "감지 다시 시작",
+          "en": "Restart detection",
+          "ja": "検出を再起動",
+          "zh": "重新啟動偵測"
+        }
+      }
+    ],
+    "zh": {
+      "q": "打字時沒有反應",
+      "a": [
+        "請在 設定 → 反應 確認該角色的「跟著打字動」是否已開啟。下方的「打字偵測」那一行會寫出無法運作的原因。",
+        "「防毒軟體可能封鎖了打字偵測」。請在防毒軟體中將 BUG-Clicker.exe 加入例外。程式只知道按下按鍵的瞬間，不會讀取按了哪個鍵。",
+        "「安全性原則」·「限制模式」。在公司 · 學校等受管理的電腦上無法使用打字偵測。",
+        "以系統管理員身分執行的程式（部分遊戲）在最前面時，Windows 不會傳送按鍵輸入。若希望在那些程式中也有反應，請也以系統管理員身分執行 BUG Clicker。",
+        "如果還是不行，請按 設定 → 反應 →「重新啟動偵測」。"
+      ]
+    }
+  },
+  {
+    "id": "nostart",
+    "ko": {
+      "q": "exe 를 눌러도 아무것도 뜨지 않아요",
+      "a": [
+        "켤 때 파일을 푸느라 몇 초 걸립니다. 처음 받은 exe 는 Windows · 백신 검사로 조금 더 걸릴 수 있으니, 한 번만 누르고 잠시 기다려 주세요.",
+        "캐릭터가 화면 오른쪽 아래 근처에 뜹니다. 작업 표시줄 오른쪽의 ^ (숨겨진 아이콘)에 BUG Clicker 아이콘이 있는지도 확인해 주세요.",
+        "백신이 막았을 수 있습니다. 백신에서 BUG-Clicker.exe 를 예외로 등록해 주세요.",
+        "그래도 안 되면 작업 관리자(Ctrl + Shift + Esc)에서 BUG Clicker 를 모두 끝낸 뒤 다시 켜 주세요. 켜다가 오류가 나면 알림 창이 뜨고 startup-error.log 파일이 남습니다. 문의하실 때 그 파일을 함께 보내 주세요.",
+        "켜지는 상태라면 설정 → 정보 → 문제 해결의 \"문제 보고 파일 만들기\"로 만든 zip 을 보내 주셔도 됩니다."
+      ]
+    },
+    "en": {
+      "q": "Nothing appears when I open the exe",
+      "a": [
+        "It takes a few seconds to unpack files when opening. A newly downloaded exe may take a little longer because of Windows and antivirus checks, so click once and wait a moment.",
+        "The character appears near the bottom right of the screen. Also check for the BUG Clicker icon under ^ (hidden icons) on the right side of the taskbar.",
+        "Your antivirus may have blocked it. Add BUG-Clicker.exe to your antivirus exceptions.",
+        "If it still doesn't work, end every BUG Clicker in Task Manager (Ctrl + Shift + Esc) and open it again. If an error occurs while starting, a message appears and startup-error.log is saved. Please send that file with your inquiry.",
+        "If the app does open, you can also send the zip made with Settings → About → Troubleshooting → \"Make a problem report file\"."
+      ]
+    },
+    "ja": {
+      "q": "exe を押しても何も表示されません",
+      "a": [
+        "起動時にファイルの展開で数秒かかります。ダウンロードしたばかりの exe は Windows・ウイルス対策ソフトの確認で少し長くかかることがあるので、一度だけ押して少しお待ちください。",
+        "キャラクターは画面の右下あたりに表示されます。タスクバー右側の ^（隠れているインジケーター）に BUG Clicker のアイコンがあるかも確認してください。",
+        "ウイルス対策ソフトがブロックした可能性があります。BUG-Clicker.exe を除外に登録してください。",
+        "それでも表示されない場合は、タスク マネージャー（Ctrl + Shift + Esc）で BUG Clicker をすべて終了してから起動し直してください。起動中にエラーが起きるとお知らせウィンドウが表示され、startup-error.log ファイルが残ります。お問い合わせの際にそのファイルも送ってください。",
+        "起動できる状態なら、設定 → 情報 → トラブル対処の「問題報告ファイルを作る」で作った zip を送っていただいても構いません。"
+      ]
+    },
+    "zh": {
+      "q": "點擊 exe 後什麼都沒有出現",
+      "a": [
+        "開啟時需要幾秒鐘解壓縮檔案。剛下載的 exe 可能因 Windows 與防毒軟體檢查而稍久一些，請只點一次並稍候。",
+        "角色會出現在螢幕右下角附近。也請確認工作列右側的 ^（隱藏的圖示）中是否有 BUG Clicker 圖示。",
+        "可能被防毒軟體封鎖了。請在防毒軟體中將 BUG-Clicker.exe 加入例外。",
+        "如果還是不行，請在工作管理員（Ctrl + Shift + Esc）中結束所有 BUG Clicker 後再重新開啟。啟動時若發生錯誤，會出現通知視窗並留下 startup-error.log 檔案。詢問時請一併附上該檔案。",
+        "若程式可以開啟，也可以傳送在 設定 → 關於 → 疑難排解 中用「建立問題回報檔」做出的 zip。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "openData",
+        "label": {
+          "ko": "데이터 폴더 열기",
+          "en": "Open data folder",
+          "ja": "データフォルダを開く",
+          "zh": "開啟資料夾"
+        }
+      }
+    ]
+  },
+  {
+    "id": "black",
+    "ko": {
+      "q": "캐릭터 꾸미기 · 대사 편집 창이 검게 나오거나 바로 닫혀요",
+      "a": [
+        "설정 → 정보 → 문제 해결에서 \"그래픽 가속 끄기\"를 켜고 다시 시작해 주세요.",
+        "그래픽 카드가 둘인 노트북(NVIDIA 등)에서 자주 생깁니다. 꺼도 캐릭터 · 말풍선은 그대로 보입니다.",
+        "그래도 같으면 캐릭터 그림이 아주 큰지(긴 변 4000px 넘음 등) 확인해 주세요.",
+        "그래픽 가속을 꺼도 같다면, 은행 · 보안 프로그램이나 백신이 앱에 끼어드는 경우가 많습니다. 보안 프로그램에서 BUG-Clicker.exe 를 예외로 등록해 주세요.",
+        "1.19.0 부터는 창이 거듭 멈추면 \"안전 모드로 다시 시작\"을 물어봅니다. 안전 모드로도 안 되면 한 단계 더(보호 상자 끄기)를 물어봅니다. 설정 → 정보 → 문제 해결에서 그래픽 가속을 다시 켜면 안전 모드도 꺼집니다.",
+        "그래도 안 되면 데이터 폴더의 startup-error.log 파일을 BUG 에게 보내 주세요. 어떤 이유로 멈췄는지 적혀 있습니다."
+      ]
+    },
+    "en": {
+      "q": "Character Studio or the Line Editor opens black or closes right away",
+      "a": [
+        "Turn on \"Turn off graphics acceleration\" in Settings → About → Troubleshooting, then restart.",
+        "This often happens on laptops with two graphics chips (NVIDIA, for example). Characters and bubbles still show as before.",
+        "If it persists, check whether the character images are very large (over 4000px on the long side, for example).",
+        "If it still happens with graphics acceleration off, banking/security software or an antivirus is often interfering with the app. Add BUG-Clicker.exe to its exceptions.",
+        "From 1.19.0, if windows keep failing, the app asks to \"Restart in safe mode\". If safe mode doesn't help, it asks about one more step (turning off the protection box). Turning graphics acceleration back on in Settings → About → Troubleshooting also turns safe mode off.",
+        "If nothing helps, please send startup-error.log from the data folder to BUG. It records why the window stopped."
+      ]
+    },
+    "ja": {
+      "q": "キャラクター設定 · セリフ編集のウィンドウが黒い、またはすぐ閉じます",
+      "a": [
+        "設定 → 情報 → トラブル対処で「グラフィックアクセラレーションをオフ」をオンにして再起動してください。",
+        "グラフィックチップが 2 つあるノート PC（NVIDIA など）でよく起きます。オフにしてもキャラクターや吹き出しはそのまま表示されます。",
+        "それでも同じなら、キャラクター画像がとても大きくないか（長辺 4000px 超など）確認してください。",
+        "グラフィックアクセラレーションをオフにしても同じ場合、銀行・セキュリティソフトやウイルス対策ソフトがアプリに割り込んでいることがよくあります。BUG-Clicker.exe を除外に登録してください。",
+        "1.19.0 からは、ウィンドウが繰り返し止まると「セーフモードで再起動」を確認します。セーフモードでもだめなら、もう一段階（保護ボックスをオフ）を確認します。設定 → 情報 → トラブル対処でグラフィックアクセラレーションをオンに戻すと、セーフモードもオフになります。",
+        "それでも直らない場合は、データフォルダの startup-error.log を BUG に送ってください。止まった理由が記録されています。"
+      ]
+    },
+    "zh": {
+      "q": "角色自定義 · 台詞編輯視窗變黑或立即關閉",
+      "a": [
+        "請在設定 → 資訊 → 疑難排解中開啟「關閉圖形加速」，然後重新啟動。",
+        "常見於有兩張顯示卡的筆電（例如 NVIDIA）。關閉後角色與對話框仍會正常顯示。",
+        "若仍相同，請確認角色圖片是否非常大（例如長邊超過 4000px）。",
+        "若關閉圖形加速後仍相同，常見原因是銀行・安全軟體或防毒軟體干擾了程式。請將 BUG-Clicker.exe 加入例外。",
+        "從 1.19.0 起，若視窗反覆停止，程式會詢問「以安全模式重新啟動」。安全模式仍無效時，會再詢問下一步（關閉保護沙箱）。在 設定 → 關於 → 疑難排解 重新開啟圖形加速，安全模式也會一併關閉。",
+        "若仍無法解決，請將資料夾中的 startup-error.log 傳給 BUG。其中記錄了停止的原因。"
+      ]
+    }
+  },
+  {
+    "id": "music",
+    "ko": {
+      "q": "음악 · 게임 소리에 반응하지 않아요",
+      "a": [
+        "\"소리에 맞춰 움직이기\"가 켜져 있는지, \"반응할 소리\"에서 음악 · 게임이 골라져 있는지 확인해 주세요.",
+        "\"소리 크기\" 막대가 움직이는지 봐 주세요. 막대가 움직이지 않으면 소리를 받지 못하는 것입니다. 이어폰 · 블루투스로 소리 장치를 바꿨다면 자동으로 다시 연결하지만, 안 되면 \"감지 다시 시작\"을 눌러 주세요.",
+        "이어폰에서만 안 되면 윈도우 소리 설정에서 이어폰이 \"기본 출력 장치\"인지 확인해 주세요. 그래도 안 되면 설정 → 반응 → \"소리 받을 곳\"에서 \"스테레오 믹스\" 같은 녹음 장치를 고를 수 있습니다.",
+        "5.1 · 7.1 서라운드 스피커를 쓰면 \"윈도우 소리를 받지 못했습니다\"가 나올 수 있습니다. 윈도우 소리 설정 → 스피커 구성을 스테레오(2채널)로 바꾸면 잘 됩니다.",
+        "막대는 움직이는데 캐릭터가 거의 움직이지 않으면 \"박자 감도\"를 높여 주세요.",
+        "일부 게임 · 음악 프로그램은 소리를 독점 모드(WASAPI 독점 · ASIO)로 내보내 다른 프로그램이 들을 수 없습니다. 그 프로그램 설정에서 독점 모드를 꺼 주세요.",
+        "원격 데스크톱으로 접속한 상태에서는 소리를 받을 수 없습니다."
+      ]
+    },
+    "en": {
+      "q": "It doesn't react to music or game sounds",
+      "a": [
+        "Check that \"Move to sound\" is on and that music or games is selected under \"Sounds to react to\".",
+        "See if the \"Volume\" bar moves. If it doesn't, no sound is coming in. If you switched to earphones or Bluetooth it reconnects automatically: if not, press \"Restart detection\".",
+        "If it only fails with earphones, check in Windows sound settings that the earphones are the default output device. If it still doesn't work, you can pick a recording device such as \"Stereo Mix\" in Settings → Reactions → \"Sound source\".",
+        "With 5.1 or 7.1 surround speakers you may see \"Couldn't capture Windows sound\". Setting the speaker configuration to Stereo (2 channels) in Windows sound settings fixes it.",
+        "If the bar moves but the character barely moves, raise \"Beat sensitivity\".",
+        "Some games and music apps output sound in exclusive mode (WASAPI exclusive · ASIO), which other programs can't hear. Turn off exclusive mode in that app's settings.",
+        "Sound can't be captured while connected through Remote Desktop."
+      ]
+    },
+    "ja": {
+      "q": "音楽 · ゲームの音に反応しません",
+      "a": [
+        "「音に合わせて動く」がオンか、「反応する音」で音楽 · ゲームが選ばれているか確認してください。",
+        "「音量」のバーが動いているか見てください。動いていなければ音を受け取れていません。イヤホンやBluetoothに切り替えた場合は自動で再接続しますが、だめなら「検出を再起動」を押してください。",
+        "イヤホンのときだけ反応しない場合は、Windows のサウンド設定でイヤホンが「既定の出力デバイス」になっているか確認してください。それでもだめなら、設定 → リアクション →「音を受け取る場所」で「ステレオ ミキサー」などの録音デバイスを選べます。",
+        "5.1・7.1 サラウンドのスピーカーを使っていると「Windows の音を受け取れませんでした」と出ることがあります。Windows のサウンド設定でスピーカー構成をステレオ（2ch）にすると動きます。",
+        "バーは動くのにキャラクターがほとんど動かない場合は、「拍の感度」を上げてください。",
+        "一部のゲームや音楽アプリは音を排他モード（WASAPI排他 · ASIO）で出すため、ほかのプログラムが聞けません。そのアプリの設定で排他モードをオフにしてください。",
+        "リモートデスクトップで接続しているときは音を受け取れません。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "tab:react",
+        "label": {
+          "ko": "반응 설정 열기",
+          "en": "Open Reactions",
+          "ja": "リアクション設定を開く",
+          "zh": "開啟反應設定"
+        }
+      },
+      {
+        "act": "restart",
+        "label": {
+          "ko": "감지 다시 시작",
+          "en": "Restart detection",
+          "ja": "検出を再起動",
+          "zh": "重新啟動偵測"
+        }
+      }
+    ],
+    "zh": {
+      "q": "音樂 · 遊戲聲音沒有反應",
+      "a": [
+        "請確認「跟著聲音動」是否已開啟，以及「要反應的聲音」中是否選了音樂 · 遊戲。",
+        "請看「音量」條是否有在動。沒有動的話，代表沒有收到聲音。如果切換到耳機 · 藍牙，程式會自動重新連線；若仍不行，請按「重新啟動偵測」。",
+        "如果只有使用耳機時沒有反應，請在 Windows 音效設定中確認耳機是否為「預設輸出裝置」。若仍不行，可以在 設定 → 反應 →「接收聲音的來源」中選擇「立體聲混音」等錄音裝置。",
+        "使用 5.1 · 7.1 環繞音效喇叭時，可能會出現「無法接收 Windows 的聲音」。在 Windows 音效設定中將喇叭組態改為立體聲（2 聲道）即可正常運作。",
+        "音量條有動但角色幾乎不動時，請調高「節拍靈敏度」。",
+        "部分遊戲 · 音樂程式會以獨佔模式（WASAPI 獨佔 · ASIO）輸出聲音，其他程式無法收聽。請在該程式的設定中關閉獨佔模式。",
+        "透過遠端桌面連線時無法收到聲音。"
+      ]
+    }
+  },
+  {
+    "id": "admin",
+    "ko": {
+      "q": "관리자 권한으로 실행해야 하나요?",
+      "a": [
+        "아니요. 음악 · 게임 소리는 관리자 권한 없이도 Windows에서 나는 모든 소리를 듣습니다.",
+        "관리자 권한으로 실행한 게임 안에서 타자에도 반응하게 하고 싶을 때만 BUG Clicker를 관리자 권한으로 실행해 주세요.",
+        "일부 PC에서 BUG Clicker 를 관리자 권한으로 실행하면 Windows 소리를 받지 못한다는 제보가 있어 확인하고 있습니다. 이때 설정 → 반응 → 소리 감지 아래에 나오는 문구나, 설정 → 정보 → 문제 보고 파일을 보내 주시면 원인을 찾는 데 큰 도움이 됩니다."
+      ]
+    },
+    "en": {
+      "q": "Do I need to run it as administrator?",
+      "a": [
+        "No. For music and game sounds it hears every sound on Windows without administrator rights.",
+        "Only run BUG Clicker as administrator if you want it to react to typing inside a game that runs as administrator.",
+        "We have reports that on some PCs, running BUG Clicker as administrator stops it from capturing Windows sound, and we are looking into it. If this happens, please send the message shown under Settings → Reactions → Sound detection, or a problem report file from Settings → About. It helps a lot in finding the cause."
+      ]
+    },
+    "ja": {
+      "q": "管理者として実行する必要がありますか？",
+      "a": [
+        "いいえ。音楽 · ゲームの音は、管理者権限なしでWindowsで鳴るすべての音を聞きます。",
+        "管理者として実行したゲームの中でもタイピングに反応させたいときだけ、BUG Clickerを管理者として実行してください。",
+        "一部のPCで BUG Clicker を管理者として実行すると Windows の音を取得できないという報告があり、確認しています。その場合は、設定 → リアクション → 音の検出 の下に表示される文や、設定 → 情報 の問題報告ファイルを送っていただくと、原因の特定に大きく役立ちます。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "tab:react",
+        "label": {
+          "ko": "반응 설정 열기",
+          "en": "Open Reactions",
+          "ja": "リアクション設定を開く",
+          "zh": "開啟反應設定"
+        }
+      }
+    ],
+    "zh": {
+      "q": "需要以系統管理員身分執行嗎？",
+      "a": [
+        "不需要。音樂 · 遊戲聲音不需要系統管理員權限，就能聽到 Windows 發出的所有聲音。",
+        "只有在希望以系統管理員身分執行的遊戲中也對打字有反應時，才需要以系統管理員身分執行 BUG Clicker。",
+        "有回報指出，在部分電腦上以系統管理員身分執行 BUG Clicker 時無法擷取 Windows 聲音，我們正在確認中。發生時，請傳送 設定 → 反應 → 聲音偵測 下方顯示的文字，或 設定 → 關於 的問題回報檔，這對找出原因很有幫助。"
+      ]
+    }
+  },
+  {
+    "id": "smartscreen",
+    "ko": {
+      "q": "처음 실행할 때 \"Windows의 PC 보호\" 창이 떠요",
+      "a": [
+        "코드 서명 인증서가 없는 프로그램이라 뜨는 안내입니다. 추가 정보 → 실행을 눌러 주세요.",
+        "공식 내려받기 링크에서 받은 파일인지는 릴리스 설명 맨 아래의 SHA-256 지문으로 확인하실 수 있습니다."
+      ]
+    },
+    "en": {
+      "q": "\"Windows protected your PC\" appears on first launch",
+      "a": [
+        "This appears because the program has no code-signing certificate. Click More info → Run anyway.",
+        "You can confirm the file came from the official download link with the SHA-256 fingerprint at the bottom of the release notes."
+      ]
+    },
+    "ja": {
+      "q": "初回起動時に「WindowsによってPCが保護されました」と表示されます",
+      "a": [
+        "コード署名証明書がないプログラムのため表示される案内です。詳細情報 → 実行 を押してください。",
+        "公式ダウンロードリンクから入手したファイルかどうかは、リリース説明の一番下にあるSHA-256で確認できます。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "releases",
+        "label": {
+          "ko": "공식 내려받기 페이지 열기",
+          "en": "Open the official download page",
+          "ja": "公式ダウンロードページを開く",
+          "zh": "開啟官方下載頁面"
+        }
+      }
+    ],
+    "zh": {
+      "q": "第一次執行時出現「Windows 已保護您的電腦」",
+      "a": [
+        "這是因為程式沒有程式碼簽章憑證而出現的提示。請按 其他資訊 → 仍要執行。",
+        "可以用發行說明最下方的 SHA-256 指紋，確認檔案是否來自官方下載連結。"
+      ]
+    }
+  },
+  {
+    "id": "antivirus",
+    "ko": {
+      "q": "백신이 BUG Clicker를 막아요",
+      "a": [
+        "타자 감지가 키보드 입력을 받는 기능이라 백신이 오해할 수 있습니다. 키를 누른 순간만 알고 어떤 키인지는 읽지 않으며, 아무것도 저장하거나 보내지 않습니다.",
+        "백신에서 BUG-Clicker.exe를 예외로 등록하시거나, 타자 반응을 쓰지 않는다면 설정 → 반응에서 \"타자에 맞춰 움직이기\"를 꺼 두셔도 됩니다."
+      ]
+    },
+    "en": {
+      "q": "My antivirus blocks BUG Clicker",
+      "a": [
+        "Because typing detection receives keyboard input, antivirus software may misjudge it. It only knows when a key is pressed, never which key, and saves or sends nothing.",
+        "Add BUG-Clicker.exe to your antivirus exceptions, or if you don't use typing reactions, turn off \"Move to typing\" in Settings → Reactions."
+      ]
+    },
+    "ja": {
+      "q": "ウイルス対策ソフトがBUG Clickerをブロックします",
+      "a": [
+        "タイピングの検出はキーボード入力を受け取る機能のため、ウイルス対策ソフトに誤解されることがあります。キーを押した瞬間だけを知り、どのキーかは読まず、何も保存・送信しません。",
+        "ウイルス対策ソフトで BUG-Clicker.exe を除外に登録するか、タイピングの反応を使わない場合は 設定 → リアクション で「タイピングに合わせて動く」をオフにしてください。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "tab:react",
+        "label": {
+          "ko": "반응 설정 열기",
+          "en": "Open Reactions",
+          "ja": "リアクション設定を開く",
+          "zh": "開啟反應設定"
+        }
+      }
+    ],
+    "zh": {
+      "q": "防毒軟體封鎖了 BUG Clicker",
+      "a": [
+        "打字偵測會接收鍵盤輸入，因此防毒軟體可能會誤判。程式只知道按下按鍵的瞬間，不會讀取按了哪個鍵，也不會儲存或傳送任何資料。",
+        "請在防毒軟體中將 BUG-Clicker.exe 加入例外；若不使用打字反應，也可以在 設定 → 反應 中關閉「跟著打字動」。"
+      ]
+    }
+  },
+  {
+    "id": "lost",
+    "ko": {
+      "q": "캐릭터가 화면 밖으로 사라졌어요",
+      "a": [
+        "시계 옆 트레이 아이콘 → \"전부 한자리에 모으기\"를 눌러 주세요.",
+        "또는 설정 → 캐릭터 → 그 캐릭터 → \"화면 안으로 되돌리기\"를 눌러 주세요."
+      ]
+    },
+    "en": {
+      "q": "A character disappeared off the screen",
+      "a": [
+        "Click the tray icon next to the clock → \"Gather all in one spot\".",
+        "Or open Settings → Characters → that character → \"Bring back on screen\"."
+      ]
+    },
+    "ja": {
+      "q": "キャラクターが画面の外に消えました",
+      "a": [
+        "時計の横のトレイアイコン →「すべて1か所に集める」を押してください。",
+        "または 設定 → キャラクター → そのキャラクター →「画面内に戻す」を押してください。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "gather",
+        "label": {
+          "ko": "전부 한자리에 모으기",
+          "en": "Gather all in one spot",
+          "ja": "すべて1か所に集める",
+          "zh": "全部集中到一處"
+        }
+      },
+      {
+        "act": "tab:pets",
+        "label": {
+          "ko": "캐릭터 설정 열기",
+          "en": "Open Characters",
+          "ja": "キャラクター設定を開く",
+          "zh": "開啟角色設定"
+        }
+      }
+    ],
+    "zh": {
+      "q": "角色跑到畫面外面不見了",
+      "a": [
+        "請按時鐘旁的系統匣圖示 →「全部集中到一處」。",
+        "或是 設定 → 角色 → 該角色 →「移回畫面內」。"
+      ]
+    }
+  },
+  {
+    "id": "behind",
+    "ko": {
+      "q": "캐릭터가 다른 창 뒤로 숨어요",
+      "a": [
+        "캐릭터를 오른쪽 버튼으로 눌러 \"늘 앞으로 고정\"을 켜거나, 설정 → 캐릭터 → \"항상 맨 위\"를 켜 주세요.",
+        "전체 화면 프로그램이 덮어도 몇 초 안에 다시 앞으로 나옵니다."
+      ]
+    },
+    "en": {
+      "q": "A character hides behind other windows",
+      "a": [
+        "Right-click the character and turn on \"Always on top\", or turn on Settings → Characters → \"Always on top\".",
+        "Even if a full-screen app covers it, it comes back to the front within seconds."
+      ]
+    },
+    "ja": {
+      "q": "キャラクターがほかのウィンドウの後ろに隠れます",
+      "a": [
+        "キャラクターを右クリックして「常に最前面」をオンにするか、設定 → キャラクター →「常に最前面」をオンにしてください。",
+        "全画面アプリに覆われても、数秒で前に戻ります。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "tab:pets",
+        "label": {
+          "ko": "캐릭터 설정 열기",
+          "en": "Open Characters",
+          "ja": "キャラクター設定を開く",
+          "zh": "開啟角色設定"
+        }
+      }
+    ],
+    "zh": {
+      "q": "角色躲到其他視窗後面",
+      "a": [
+        "在角色上按右鍵開啟「永遠在最上層」，或開啟 設定 → 角色 →「永遠在最上層」。",
+        "即使被全螢幕程式蓋住，幾秒內也會再回到最前面。"
+      ]
+    }
+  },
+  {
+    "id": "data",
+    "ko": {
+      "q": "캐릭터와 설정은 어디에 저장되나요?",
+      "a": [
+        "BUG-Clicker.exe 옆의 \"BUG Clicker 데이터\" 폴더에 저장됩니다. 다른 곳으로 옮길 때는 exe와 이 폴더를 함께 옮겨 주세요.",
+        "그 자리에 쓸 수 없으면(보안 프로그램이 막은 폴더 등) %APPDATA%\\BUG Clicker 에 저장됩니다. 아래 버튼으로 지금 쓰는 폴더를 열 수 있습니다.",
+        "새 버전 exe를 같은 자리에 덮어써도 캐릭터는 그대로입니다."
+      ]
+    },
+    "en": {
+      "q": "Where are characters and settings saved?",
+      "a": [
+        "In the \"BUG Clicker 데이터\" folder next to BUG-Clicker.exe. When moving it, move the exe and this folder together.",
+        "If that location can't be written (for example, a folder blocked by security software), data is saved in %APPDATA%\\BUG Clicker. The button below opens the folder currently in use.",
+        "Overwriting the exe with a new version in the same place keeps your characters."
+      ]
+    },
+    "ja": {
+      "q": "キャラクターと設定はどこに保存されますか？",
+      "a": [
+        "BUG-Clicker.exe の横にある「BUG Clicker 데이터」フォルダーに保存されます。移動するときは、exeとこのフォルダーを一緒に移動してください。",
+        "その場所に書き込めない場合（セキュリティソフトが保護しているフォルダなど）は、%APPDATA%\\BUG Clicker に保存されます。下のボタンで今使っているフォルダを開けます。",
+        "新しいバージョンのexeを同じ場所に上書きしても、キャラクターはそのままです。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "openData",
+        "label": {
+          "ko": "데이터 폴더 열기",
+          "en": "Open data folder",
+          "ja": "データフォルダーを開く",
+          "zh": "開啟資料儲存資料夾"
+        }
+      }
+    ],
+    "zh": {
+      "q": "角色和設定儲存在哪裡？",
+      "a": [
+        "儲存在 BUG-Clicker.exe 旁邊的「BUG Clicker 데이터」資料夾。搬移時請把 exe 和這個資料夾一起搬。",
+        "若該位置無法寫入（例如被安全軟體保護的資料夾），會存到 %APPDATA%\\BUG Clicker。可用下方按鈕開啟目前使用的資料夾。",
+        "在同一個位置用新版本的 exe 覆蓋，角色也會保留。"
+      ]
+    }
+  },
+  {
+    "id": "protected",
+    "ko": {
+      "q": "받은 캐릭터를 다른 PC에서도 쓰고 싶어요",
+      "a": [
+        "받은(.cvclk) 캐릭터의 그림은 그림을 함부로 꺼내 가지 못하도록, 받은 PC · Windows 사용자에서만 열리게 보호되어 있습니다.",
+        "다른 PC에서는 데이터 폴더를 복사하는 대신, 처음 받은 .cvclk 파일을 주고받기 → 가져오기로 다시 가져와 주세요.",
+        "보낸 사람이 \"받은 사람이 다시 내보내지 못하게\"를 켜 두었다면 그 캐릭터는 다시 내보낼 수 없습니다."
+      ]
+    },
+    "en": {
+      "q": "I want to use a received character on another PC",
+      "a": [
+        "Images of received (.cvclk) characters are protected so they open only on the PC and Windows user that received them, to keep the art from being taken out.",
+        "On another PC, instead of copying the data folder, import the original .cvclk file again via Share → Import.",
+        "If the sender turned on \"Prevent recipients from re-exporting\", that character cannot be exported again."
+      ]
+    },
+    "ja": {
+      "q": "受け取ったキャラクターをほかのPCでも使いたいです",
+      "a": [
+        "受け取った（.cvclk）キャラクターの画像は、勝手に取り出されないよう、受け取ったPC · Windowsユーザーでのみ開けるよう保護されています。",
+        "ほかのPCでは、データフォルダーをコピーする代わりに、最初に受け取った .cvclk ファイルを 共有 → インポート で取り込み直してください。",
+        "送った人が「受け取った人が再エクスポートできないようにする」をオンにしている場合、そのキャラクターは再エクスポートできません。"
+      ]
+    },
+    "zh": {
+      "q": "想在其他電腦上使用收到的角色",
+      "a": [
+        "收到的（.cvclk）角色圖片受到保護，只能在收到它的電腦 · Windows 使用者中開啟，以防止圖片被隨意取出。",
+        "在其他電腦上，請不要複製資料夾，而是用 分享 → 匯入 重新匯入最初收到的 .cvclk 檔。",
+        "如果傳送者開啟了「不讓收件人再次匯出」，該角色就無法再次匯出。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "tab:import",
+        "label": {
+          "ko": "주고받기 열기",
+          "en": "Open Share",
+          "ja": "共有を開く",
+          "zh": "開啟分享"
+        }
+      }
+    ]
+  },
+  {
+    "id": "update",
+    "ko": {
+      "q": "업데이트는 어떻게 받나요?",
+      "a": [
+        "켜 두면 6시간마다 확인해 새 버전을 미리 받아 두고, 다음에 켤 때 적용합니다.",
+        "바로 받으려면 설정 → 정보 → \"지금 확인\"을 눌러 주세요."
+      ]
+    },
+    "en": {
+      "q": "How do I get updates?",
+      "a": [
+        "While running, it checks every 6 hours, downloads new versions in advance, and applies them next time you start.",
+        "To get it right away, press Settings → About → \"Check now\"."
+      ]
+    },
+    "ja": {
+      "q": "アップデートはどうやって受け取りますか？",
+      "a": [
+        "起動中は6時間ごとに確認して新しいバージョンを事前にダウンロードし、次回起動時に適用します。",
+        "すぐに受け取るには 設定 → 情報 →「今すぐ確認」を押してください。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "checkUpdate",
+        "label": {
+          "ko": "지금 확인",
+          "en": "Check now",
+          "ja": "今すぐ確認",
+          "zh": "立即檢查"
+        }
+      }
+    ],
+    "zh": {
+      "q": "要怎麼取得更新？",
+      "a": [
+        "程式開著時每 6 小時會檢查一次，先下載新版本，下次開啟時套用。",
+        "想立刻取得，請按 設定 → 關於 →「立即檢查」。"
+      ]
+    }
+  },
+  {
+    "id": "share",
+    "ko": {
+      "q": "다른 사람에게 캐릭터를 주고 싶어요",
+      "a": [
+        "설정 → 주고받기 → 내보내기에서 캐릭터를 골라 .cvclk 파일로 내보내 주세요. 그림 · 대사 · 소리 · 말풍선이 모두 들어갑니다.",
+        "받는 분은 주고받기 → 가져오기 칸에 파일을 끌어다 놓으면 됩니다. 예전 판에서 만든 파일도 가져올 수 있습니다."
+      ]
+    },
+    "en": {
+      "q": "I want to give a character to someone",
+      "a": [
+        "In Settings → Share → Export, select characters and export them as a .cvclk file. Images, lines, sound, and bubbles are all included.",
+        "The recipient just drops the file into Share → Import. Files made in older versions can be imported too."
+      ]
+    },
+    "ja": {
+      "q": "ほかの人にキャラクターを渡したいです",
+      "a": [
+        "設定 → 共有 → エクスポートでキャラクターを選び、.cvclk ファイルとして書き出してください。画像 · セリフ · 音 · 吹き出しがすべて含まれます。",
+        "受け取る人は 共有 → インポート の枠にファイルをドロップするだけです。古いバージョンで作ったファイルも取り込めます。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "tab:import",
+        "label": {
+          "ko": "주고받기 열기",
+          "en": "Open Share",
+          "ja": "共有を開く",
+          "zh": "開啟分享"
+        }
+      }
+    ],
+    "zh": {
+      "q": "想把角色送給別人",
+      "a": [
+        "在 設定 → 分享 → 匯出 選擇角色，匯出成 .cvclk 檔。圖片 · 台詞 · 音效 · 對話框都會包含在內。",
+        "對方只要把檔案拖到 分享 → 匯入 的格子即可。舊版本做的檔案也可以匯入。"
+      ]
+    }
+  },
+  {
+    "id": "bubble",
+    "ko": {
+      "q": "말풍선은 어떻게 꾸미나요? (꾸미기 가이드)",
+      "a": [
+        "캐릭터 꾸미기 → 말풍선에서 꾸밉니다. 위치 · 색 · 글꼴 · 모양 · 움직임 · 스타일 저장 여섯 묶음으로 나뉘고, 고르는 동안 왼쪽에 말풍선이 떠 있습니다.",
+        "크기: 글자만 키우려면 글꼴 → 글자 크기(11~22px), 말풍선 전체를 키우려면 모양 → 말풍선 크기(80~160%)를 씁니다. 말풍선 크기는 글자 · 안쪽 여백 · 모서리를 같은 비율로 키웁니다. 폭은 대사 길이에 맞춰 저절로 정해집니다.",
+        "색: 색 묶음에서 고르거나 직접 고릅니다. 글자 대비가 \"읽기 어려움\"으로 나오면 바탕을 더 어둡게 또는 더 밝게 해 주세요. 바탕 그라데이션을 쓰면 두 색 모두와의 대비를 함께 봅니다.",
+        "모양: 일반(네모 · 손그림 · 픽셀 · 자막)은 움직이지 않고, 특수(생각 · 집중선, 회상, 어둠, 상상 · 몽글, 찢은 종이, 외침)는 가벼운 애니메이션이 있습니다. 모서리 값은 네모에서만 쓰입니다. 마우스를 올리면 고르지 않아도 왼쪽에 미리 보입니다.",
+        "귀퉁이 그림: PNG · GIF, 2MB 까지, 정사각형을 권장합니다. 비워 둔 귀퉁이는 보이지 않고, 그림 크기와 걸치기(바깥에 · 반쯤 · 안쪽에)를 고를 수 있습니다.",
+        "움직임: 등장 방식 · 글자 효과 · 빠르기를 고릅니다. \"주의\" 표시가 붙은 효과(떨림 · 글리치 · 집중선 · 외침)는 깜빡이거나 빠르게 바뀝니다. 빛에 민감하시면 설정 → 꾸미기 → 움직임 줄이기를 켜 주세요.",
+        "대사마다 다르게: 모양 · 색 · 글꼴 · 움직임 · 크기를 스타일로 저장한 뒤, 대사 편집에서 줄마다 스타일을 고릅니다. 대사 파일(.txt)에서는 줄 앞에 {외침} 처럼 씁니다.",
+        "다른 사람에게 줄 때: .cvclk 로 내보낼 때 꾸밈(귀퉁이 그림 · 그라데이션 · 테두리)을 함께 담을지 고를 수 있습니다. 1.15 이하 버전에서는 스타일 · 특수 말풍선이 기본 말풍선으로 보입니다."
+      ]
+    },
+    "en": {
+      "q": "How do I customize the speech bubble? (Styling guide)",
+      "a": [
+        "Customize it in Character Studio → Bubble. It is split into six groups: Position · Color · Font · Shape · Motion · Saved styles: and the bubble stays on the left while you choose.",
+        "Size: to enlarge only the text, use Font → Text size (11–22px). To enlarge the whole bubble, use Shape → Bubble size (80–160%), which scales the text, inner padding and corners together. The width adjusts to the length of the line automatically.",
+        "Color: pick from Color sets or choose your own. If the text contrast shows \"Hard to read\", make the background darker or lighter. With a background gradient, contrast is checked against both colors.",
+        "Shape: Basic shapes (Box · Hand-drawn · Pixel · Caption) don't move; Special shapes (Thought · focus lines, Flashback, Dark, Daydream · puffy, Torn paper, Shout) have light animation. The corner value only applies to Box. Hover over a shape to preview it on the left without choosing it.",
+        "Corner images: PNG · GIF, up to 2MB, square recommended. Empty corners are not shown, and you can choose the image size and overlap (Outside · Half over · Inside).",
+        "Motion: choose how it appears, the text effect and the speed. Effects marked \"Caution\" (Shake · Glitch · focus lines · Shout) flash or change quickly. If you are sensitive to light, turn on Settings → Customize → Reduce motion.",
+        "Different bubbles per line: save shape, color, font, motion and size as a style, then pick a style for each line in the Line Editor. In a line file (.txt), write the style name at the start of a line, like {Shout}.",
+        "Sharing with others: when exporting a .cvclk, you can choose whether to include decorations (corner images · gradient · border). In version 1.15 and earlier, styles and special bubbles appear as the default bubble."
+      ]
+    },
+    "ja": {
+      "q": "吹き出しはどうやって飾りますか？（デザインガイド）",
+      "a": [
+        "キャラクター設定 → 吹き出し で飾ります。位置・色・フォント・形・動き・スタイル保存 の6つに分かれていて、選んでいる間は左に吹き出しが表示されます。",
+        "大きさ：文字だけを大きくするには フォント → 文字サイズ（11〜22px）、吹き出し全体を大きくするには 形 → 吹き出しの大きさ（80〜160%）を使います。吹き出しの大きさは、文字・内側の余白・角を同じ割合で大きくします。幅はセリフの長さに合わせて自動で決まります。",
+        "色：カラーセットから選ぶか、自分で選びます。文字のコントラストが「読みにくい」と出たら、背景をもっと暗く、または明るくしてください。背景グラデーションを使うと、両方の色とのコントラストを確認します。",
+        "形：一般（四角・手描き・ピクセル・字幕）は動かず、特殊（思考・集中線、回想、闇、想像・もこもこ、破った紙、叫び）には軽いアニメーションがあります。角の値は四角でのみ使われます。マウスを乗せると、選ばなくても左でプレビューできます。",
+        "角の画像：PNG・GIF、2MBまで、正方形がおすすめです。空いている角は表示されず、画像の大きさとかかり具合（外側に・半分・内側に）を選べます。",
+        "動き：表示のしかた・文字エフェクト・速さを選びます。「注意」が付いた効果（震え・グリッチ・集中線・叫び）は点滅したり素早く変化したりします。光に敏感な方は 設定 → カスタマイズ → 動きを減らす をオンにしてください。",
+        "セリフごとに変える：形・色・フォント・動き・大きさをスタイルとして保存し、セリフ編集で行ごとにスタイルを選びます。セリフファイル（.txt）では、行の頭に {叫び} のように書きます。",
+        "ほかの人に渡すとき：.cvclk で書き出すとき、装飾（角の画像・グラデーション・枠線）を含めるか選べます。1.15 以前のバージョンでは、スタイル・特殊吹き出しはデフォルトの吹き出しで表示されます。"
+      ]
+    },
+    "zh": {
+      "q": "要怎麼裝飾對話框？（裝飾指南）",
+      "a": [
+        "在 角色自定義 → 對話框 中裝飾。分為 位置・顏色・字型・形狀・動態・儲存樣式 六組，選擇時左側會一直顯示對話框。",
+        "大小：只想放大文字，請用 字型 → 文字大小（11～22px）；想放大整個對話框，請用 形狀 → 對話框大小（80～160%），會以相同比例放大文字、內側留白與圓角。寬度會依台詞長度自動決定。",
+        "顏色：從配色組合中選擇，或自行選擇。若文字對比顯示「不易閱讀」，請把背景調得更暗或更亮。使用背景漸層時，會同時檢查與兩種顏色的對比。",
+        "形狀：一般（方框・手繪・像素・字幕）不會動；特殊（思考・集中線、回憶、黑暗、想像・軟綿綿、撕紙、大喊）帶有輕微動畫。圓角數值只用於方框。滑鼠移上去時，不用選擇也能在左側預覽。",
+        "角落圖片：PNG・GIF，最大 2MB，建議使用正方形。空著的角落不會顯示，可選擇圖片大小與重疊位置（在外側・一半・在內側）。",
+        "動態：選擇出現方式、文字效果與速度。標示「注意」的效果（顫抖・故障效果・集中線・大喊）會閃爍或快速變化。若您對光線敏感，請開啟 設定 → 自定義 → 減少動態效果。",
+        "每句台詞不同：將形狀、顏色、字型、動態與大小存成樣式後，在台詞編輯中逐行選擇樣式。在台詞檔（.txt）中，於行首寫上 {大喊} 這樣的樣式名稱。",
+        "分享給別人時：匯出 .cvclk 時，可選擇是否一併包含裝飾（角落圖片・漸層・外框）。1.15 以前的版本會將樣式與特殊對話框顯示為預設對話框。"
+      ]
+    },
+    "actions": [
+      {
+        "act": "detail:bubble",
+        "label": {
+          "ko": "말풍선 세팅 열기",
+          "en": "Open Bubble settings",
+          "ja": "吹き出し設定を開く",
+          "zh": "開啟對話框設定"
+        }
+      },
+      {
+        "act": "lines",
+        "label": {
+          "ko": "대사 편집 열기",
+          "en": "Open Line Editor",
+          "ja": "セリフ編集を開く",
+          "zh": "開啟台詞編輯"
+        }
+      }
+    ]
+  },
+  {
+    "id": "obs",
+    "ko": {
+      "q": "OBS 로 방송 · 녹화할 때 캐릭터가 까맣게 나와요",
+      "a": [
+        "OBS 의 \"창 캡처\" 는 투명한 창의 빈 곳을 까맣게 찍습니다. BUG Clicker 캐릭터 창은 캐릭터 둘레가 투명해서 그렇게 보입니다.",
+        "창 캡처의 \"캡처 방식\" 을 \"Windows 10 (1903 이상)\" 으로 바꿔 주세요. \"BitBlt\" 방식은 캐릭터까지 까맣게 찍을 수 있습니다. 창 목록에서는 \"BUG Clicker · 캐릭터 이름\" 을 고르면 됩니다.",
+        "바탕을 지우려면: 바탕화면 캐릭터 우클릭 → \"촬영 관련\" → \"방송용 배경색 (OBS)\" 에서 초록을 고르고, OBS 소스에 \"색상 키\" 필터를 초록으로 넣으면 캐릭터만 남습니다. 다 쓰면 같은 메뉴에서 \"끄기\" 를 눌러 주세요.",
+        "가장 간단한 방법은 \"디스플레이 캡처\" 로 화면을 찍고 Alt 를 누른 채 테두리를 끌어 캐릭터 부분만 남기는 것입니다. 이 방법은 바탕화면도 함께 보입니다.",
+        "앱 안의 촬영(PNG · GIF)은 이 설정과 상관없이 투명 · 어둡게 · 바탕화면 중에 고른 대로 찍힙니다."
+      ]
+    },
+    "en": {
+      "q": "The character looks black when streaming or recording with OBS",
+      "a": [
+        "OBS \"Window Capture\" records the empty parts of a transparent window as black. BUG Clicker character windows are transparent around the character, so they look black.",
+        "Set Window Capture's \"Capture Method\" to \"Windows 10 (1903 and up)\". The \"BitBlt\" method may record the character itself as black. In the window list, pick \"BUG Clicker · character name\".",
+        "To remove the background: right-click the desktop character → \"Capture\" → \"Broadcast background (OBS)\" → Green, then add a \"Color Key\" filter set to green to the OBS source. Only the character will remain. Choose \"Off\" in the same menu when you're done.",
+        "The simplest way is \"Display Capture\": capture the screen, then hold Alt and drag the edges to crop to the character. The desktop will show behind it.",
+        "In-app captures (PNG · GIF) are not affected and use the background you chose (transparent · dark · desktop)."
+      ]
+    },
+    "ja": {
+      "q": "OBS で配信・録画するとキャラクターが黒く映ります",
+      "a": [
+        "OBS の「ウィンドウキャプチャ」は、透明なウィンドウの空いた部分を黒く写します。BUG Clicker のキャラクターウィンドウはキャラクターの周りが透明なため、黒く見えます。",
+        "ウィンドウキャプチャの「キャプチャ方法」を「Windows 10 (1903 以降)」に変えてください。「BitBlt」ではキャラクターまで黒くなることがあります。ウィンドウ一覧では「BUG Clicker · キャラクター名」を選びます。",
+        "背景を消すには：デスクトップのキャラクターを右クリック →「撮影関連」→「配信用の背景色 (OBS)」で緑を選び、OBS のソースに「カラーキー」フィルターを緑で追加すると、キャラクターだけが残ります。使い終わったら同じメニューで「オフ」を選んでください。",
+        "いちばん簡単なのは「画面キャプチャ」で画面を写し、Alt を押しながら枠をドラッグしてキャラクターの部分だけ残す方法です。この方法ではデスクトップも一緒に映ります。",
+        "アプリ内の撮影（PNG · GIF）はこの設定に関係なく、選んだ背景（透明 · 暗く · デスクトップ）で撮れます。"
+      ]
+    },
+    "zh": {
+      "q": "用 OBS 直播或錄影時角色變成黑色",
+      "a": [
+        "OBS 的「視窗擷取」會把透明視窗的空白處拍成黑色。BUG Clicker 的角色視窗在角色周圍是透明的，所以看起來是黑的。",
+        "請把視窗擷取的「擷取方式」改成「Windows 10（1903 以上）」。「BitBlt」方式可能連角色都拍成黑色。在視窗清單中選擇「BUG Clicker · 角色名稱」。",
+        "要去掉背景：在桌面角色上按右鍵 →「拍攝相關」→「直播用背景色 (OBS)」選擇綠色，再在 OBS 來源加入綠色的「色彩鍵」濾鏡，就只會留下角色。用完後請在同一個選單選「關閉」。",
+        "最簡單的方法是用「顯示器擷取」拍整個畫面，再按住 Alt 拖曳邊框，只留下角色的部分。這個方法會連桌面一起拍到。",
+        "App 內的拍攝（PNG · GIF）不受這個設定影響，會依你選的背景（透明 · 暗色 · 桌面）拍攝。"
+      ]
+    }
+  }
+]

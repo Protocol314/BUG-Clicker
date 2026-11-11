@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src 'self' data: https:; style-src 'unsafe-inline' 'self'; font-src 'self' data:; script-src 'self'">
+<title>BUG Clicker 캐릭터 띄우기</title>
+<link rel="stylesheet" href="../ui/fonts.css">
+<link rel="stylesheet" href="../settings/settings.css">
+<link rel="stylesheet" href="spawn.css">
+<script src="../ui/theme.js"></script>
+</head>
+<body>
+<div id="app">
+  <header class="appbar">
+    <div class="appbar__row drag">
+      <img class="brand__logo" src="../../assets/clicker-logo.png" alt="">
+      <span class="appbar__brand">BUG</span>
+      <span class="brand__sub">캐릭터 띄우기</span>
+    </div>
+  </header>
+  <main id="stage">
+    <p class="set-label pad-top"><b>누르면</b> 한 명 띄우고, <b>오른쪽 버튼</b>으로 누르면 그 캐릭터를 한 명 닫습니다.
+      같은 캐릭터를 여러 명 띄워도 되고, 새로 띄운 캐릭터는 화면 오른쪽 아래에 나옵니다.</p>
+    <div class="sgrid" id="grid"></div>
+  </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="../ui/i18n-dict.js"></script>
+<script src="../ui/i18n-zhcn.js"></script>
+<script src="../ui/i18n.js"></script>
+<script src="../ui/layers.js"></script>
+<script src="../ui/kit.js"></script>
+<script src="spawn.js"></script>
+</body>
+</html>

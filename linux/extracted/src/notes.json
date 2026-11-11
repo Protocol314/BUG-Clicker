@@ -1,0 +1,230 @@
+[
+  {
+    "version": "1.0.0",
+    "base": "1.19.2",
+    "date": "2026-11-06",
+    "items": [
+      {
+        "t": "new",
+        "title": "BUG Clicker 리눅스판(beta)이 시작되었습니다.",
+        "sub": [
+          "Windows 1.19.2와 같은 기능을 담았습니다. 캐릭터 꾸미기 · 대사 · 파츠 · 말풍선 · 알림 · 주고받기를 그대로 쓸 수 있습니다.",
+          "beta 판이라 부족하거나 작동하지 않을 수 있습니다. 문제가 있으면 설정 → 정보 → 문제 해결 → \"문제 보고 파일 만들기\"로 파일을 만들어 보내 주세요."
+        ]
+      },
+      {
+        "t": "new",
+        "title": "처음 켤 때 한 번만 실행을 허용해 주세요.",
+        "sub": [
+          "받은 파일을 오른쪽 클릭 → 속성에서 \"프로그램으로 실행 허용\"을 켜 주세요.",
+          "그래도 켜지지 않으면 설정 → 정보 → 자주 묻는 질문의 리눅스 항목을 봐 주세요."
+        ]
+      },
+      {
+        "t": "new",
+        "title": "리눅스 설치 · 실행 관련 문의는 답변이 늦어질 수 있습니다.",
+        "sub": [
+          "리눅스판의 설치 · 실행 안내는 BUG도 잘 알지 못해, 웹에서 찾아 정리한 내용입니다.",
+          "컴퓨터마다 환경이 달라 문제를 확인하는 데 시간이 걸릴 수 있습니다. 양해 부탁드립니다."
+        ]
+      },
+      {
+        "t": "new",
+        "title": "리눅스에서 달라진 점",
+        "sub": [
+          "음악 감지는 스피커 · 이어폰에서 나는 소리를 그대로 받습니다.",
+          "타자 감지는 아직 쓸 수 없습니다. 안전하게 할 방법을 찾을 때까지 꺼 둡니다.",
+          "일부 화면에서는 캐릭터가 제대로 움직이도록 호환 모드로 켜집니다."
+        ]
+      },
+      {
+        "t": "improve",
+        "title": "자주 묻는 질문에 리눅스 항목을 더했습니다.",
+        "sub": [
+          "켜지지 않을 때 · 캐릭터 둘레가 검게 보일 때 · 음악 감지 · 타자 감지 · 저장 위치 등을 담았습니다."
+        ]
+      }
+    ],
+    "body": "안녕하세요, BUG입니다.\n\n리눅스판을 처음 내놓습니다. Windows 1.19.2를 기준으로 만들었습니다.\n\n■ BUG Clicker 리눅스판(beta)이 시작되었습니다.\n\n* Windows 1.19.2와 같은 기능을 담았습니다. 캐릭터 꾸미기 · 대사 · 파츠 · 말풍선 · 알림 · 주고받기를 그대로 쓸 수 있습니다.\n* beta 판이라 부족하거나 작동하지 않을 수 있습니다. 문제가 있으면 설정 → 정보 → 문제 해결 → \"문제 보고 파일 만들기\"로 파일을 만들어 보내 주세요.\n\n■ 처음 켤 때 한 번만 실행을 허용해 주세요.\n\n* 받은 파일을 오른쪽 클릭 → 속성에서 \"프로그램으로 실행 허용\"을 켜 주세요.\n* 그래도 켜지지 않으면 설정 → 정보 → 자주 묻는 질문의 리눅스 항목을 봐 주세요.\n\n■ 리눅스 설치 · 실행 관련 문의는 답변이 늦어질 수 있습니다.\n\n* 리눅스판의 설치 · 실행 안내는 BUG도 잘 알지 못해, 웹에서 찾아 정리한 내용입니다.\n* 컴퓨터마다 환경이 달라 문제를 확인하는 데 시간이 걸릴 수 있습니다. 양해 부탁드립니다.\n\n■ 리눅스에서 달라진 점\n\n* 음악 감지는 스피커 · 이어폰에서 나는 소리를 그대로 받습니다.\n* 타자 감지는 아직 쓸 수 없습니다. 안전하게 할 방법을 찾을 때까지 꺼 둡니다.\n* 일부 화면에서는 캐릭터가 제대로 움직이도록 호환 모드로 켜집니다.\n\n■ 자주 묻는 질문에 리눅스 항목을 더했습니다.\n\n* 켜지지 않을 때 · 캐릭터 둘레가 검게 보일 때 · 음악 감지 · 타자 감지 · 저장 위치 등을 담았습니다.\n\n패치에 있어 궁금하신 점은 BUG에게 문의 부탁드립니다.\n이용해주시는 모든 분들에게 감사드립니다.",
+    "en": {
+      "items": [
+        {
+          "t": "new",
+          "title": "BUG Clicker for Linux (beta) has started.",
+          "sub": [
+            "It has the same features as Windows 1.19.2. Character editing, lines, parts, speech bubbles, reminders and sharing all work as before.",
+            "As a beta, some things may be missing or may not work. If something goes wrong, make a file with Settings → About → Troubleshooting → \"Make a problem report file\" and send it."
+          ]
+        },
+        {
+          "t": "new",
+          "title": "Allow the app to run once when you first open it.",
+          "sub": [
+            "Right-click the downloaded file → Properties, and turn on \"Allow executing file as program\".",
+            "If it still won't start, see the Linux entries in Settings → About → FAQ."
+          ]
+        },
+        {
+          "t": "new",
+          "title": "Replies to Linux install and launch questions may be slow.",
+          "sub": [
+            "BUG is not very familiar with Linux either, so the install and launch guide was put together from the web.",
+            "Every computer is set up differently, so checking a problem may take some time. Thank you for your patience."
+          ]
+        },
+        {
+          "t": "new",
+          "title": "What is different on Linux",
+          "sub": [
+            "Music detection picks up the sound from your speakers or earphones as it is.",
+            "Typing detection isn't available yet. It stays off until a safe way is found.",
+            "On some screens, the app starts in a compatibility mode so characters move properly."
+          ]
+        },
+        {
+          "t": "improve",
+          "title": "Added Linux entries to the FAQ.",
+          "sub": [
+            "Covers when it won't start, a black box around the character, music detection, typing detection, where data is saved and more."
+          ]
+        }
+      ],
+      "body": "Hello, this is BUG.\n\nHere is the first Linux version. It is based on Windows 1.19.2.\n\n■ BUG Clicker for Linux (beta) has started.\n\n* It has the same features as Windows 1.19.2. Character editing, lines, parts, speech bubbles, reminders and sharing all work as before.\n* As a beta, some things may be missing or may not work. If something goes wrong, make a file with Settings → About → Troubleshooting → \"Make a problem report file\" and send it.\n\n■ Allow the app to run once when you first open it.\n\n* Right-click the downloaded file → Properties, and turn on \"Allow executing file as program\".\n* If it still won't start, see the Linux entries in Settings → About → FAQ.\n\n■ Replies to Linux install and launch questions may be slow.\n\n* BUG is not very familiar with Linux either, so the install and launch guide was put together from the web.\n* Every computer is set up differently, so checking a problem may take some time. Thank you for your patience.\n\n■ What is different on Linux\n\n* Music detection picks up the sound from your speakers or earphones as it is.\n* Typing detection isn't available yet. It stays off until a safe way is found.\n* On some screens, the app starts in a compatibility mode so characters move properly.\n\n■ Added Linux entries to the FAQ.\n\n* Covers when it won't start, a black box around the character, music detection, typing detection, where data is saved and more.\n\nIf you have any questions about the update, please contact BUG.\nThank you to everyone using BUG Clicker."
+    },
+    "ja": {
+      "items": [
+        {
+          "t": "new",
+          "title": "BUG Clicker の Linux版（beta）が始まりました。",
+          "sub": [
+            "Windows 1.19.2 と同じ機能が入っています。キャラクター編集・セリフ・パーツ・吹き出し・リマインダー・共有がそのまま使えます。",
+            "ベータ版なので、不十分だったり動作しなかったりすることがあります。問題があれば、設定 → 情報 → トラブル対処 →「問題報告ファイルを作る」でファイルを作って送ってください。"
+          ]
+        },
+        {
+          "t": "new",
+          "title": "初めて起動するときに一度だけ実行を許可してください。",
+          "sub": [
+            "ダウンロードしたファイルを右クリック → プロパティで「プログラムとして実行可能」をオンにしてください。",
+            "それでも起動しない場合は、設定 → 情報 → よくある質問の Linux の項目をご覧ください。"
+          ]
+        },
+        {
+          "t": "new",
+          "title": "Linux のインストール・起動に関するお問い合わせは、お返事が遅れることがあります。",
+          "sub": [
+            "Linux版のインストール・起動の案内は、BUG もくわしくないため、ウェブで調べてまとめた内容です。",
+            "パソコンごとに環境が違うため、問題の確認に時間がかかることがあります。ご了承ください。"
+          ]
+        },
+        {
+          "t": "new",
+          "title": "Linux で変わったところ",
+          "sub": [
+            "音楽の検出は、スピーカー・イヤホンから出る音をそのまま受け取ります。",
+            "タイピングの検出はまだ使えません。安全な方法が見つかるまでオフにしておきます。",
+            "一部の画面では、キャラクターが正しく動くように互換モードで起動します。"
+          ]
+        },
+        {
+          "t": "improve",
+          "title": "よくある質問に Linux の項目を追加しました。",
+          "sub": [
+            "起動しないとき・キャラクターのまわりが黒く見えるとき・音楽の検出・タイピングの検出・保存場所などをまとめました。"
+          ]
+        }
+      ],
+      "body": "こんにちは、BUGです。\n\nLinux版をはじめて公開します。Windows 1.19.2 をもとに作りました。\n\n■ BUG Clicker の Linux版（beta）が始まりました。\n\n* Windows 1.19.2 と同じ機能が入っています。キャラクター編集・セリフ・パーツ・吹き出し・リマインダー・共有がそのまま使えます。\n* ベータ版なので、不十分だったり動作しなかったりすることがあります。問題があれば、設定 → 情報 → トラブル対処 →「問題報告ファイルを作る」でファイルを作って送ってください。\n\n■ 初めて起動するときに一度だけ実行を許可してください。\n\n* ダウンロードしたファイルを右クリック → プロパティで「プログラムとして実行可能」をオンにしてください。\n* それでも起動しない場合は、設定 → 情報 → よくある質問の Linux の項目をご覧ください。\n\n■ Linux のインストール・起動に関するお問い合わせは、お返事が遅れることがあります。\n\n* Linux版のインストール・起動の案内は、BUG もくわしくないため、ウェブで調べてまとめた内容です。\n* パソコンごとに環境が違うため、問題の確認に時間がかかることがあります。ご了承ください。\n\n■ Linux で変わったところ\n\n* 音楽の検出は、スピーカー・イヤホンから出る音をそのまま受け取ります。\n* タイピングの検出はまだ使えません。安全な方法が見つかるまでオフにしておきます。\n* 一部の画面では、キャラクターが正しく動くように互換モードで起動します。\n\n■ よくある質問に Linux の項目を追加しました。\n\n* 起動しないとき・キャラクターのまわりが黒く見えるとき・音楽の検出・タイピングの検出・保存場所などをまとめました。\n\nアップデートについてご不明な点は、BUGまでお問い合わせください。\nご利用いただいているすべての方に感謝いたします。"
+    },
+    "zh": {
+      "items": [
+        {
+          "t": "new",
+          "title": "BUG Clicker Linux 版（beta）開始了。",
+          "sub": [
+            "具備與 Windows 1.19.2 相同的功能。角色自訂 · 台詞 · 配件 · 對話框 · 提醒 · 分享都能照常使用。",
+            "由於是 beta 版，可能有不足之處或無法運作。若有問題，請從 設定 → 資訊 → 問題排解 →「建立問題回報檔案」建立檔案並傳給我們。"
+          ]
+        },
+        {
+          "t": "new",
+          "title": "第一次啟動時，請先允許執行一次。",
+          "sub": [
+            "在下載的檔案上按右鍵 → 內容，開啟「允許以程式執行」。",
+            "若仍無法啟動，請參考 設定 → 資訊 → 常見問題 中的 Linux 項目。"
+          ]
+        },
+        {
+          "t": "new",
+          "title": "Linux 安裝 · 啟動相關的詢問，回覆可能會較慢。",
+          "sub": [
+            "Linux 版的安裝 · 啟動說明，BUG 也不太熟悉，是從網路上查詢整理的內容。",
+            "每台電腦的環境不同，確認問題可能需要一些時間。敬請見諒。"
+          ]
+        },
+        {
+          "t": "new",
+          "title": "Linux 上不同的地方",
+          "sub": [
+            "音樂偵測會直接接收喇叭 · 耳機發出的聲音。",
+            "打字偵測目前還無法使用。在找到安全的方法之前會先關閉。",
+            "在部分畫面上，為了讓角色正常移動，會以相容模式啟動。"
+          ]
+        },
+        {
+          "t": "improve",
+          "title": "在常見問題中新增了 Linux 項目。",
+          "sub": [
+            "整理了無法啟動時 · 角色周圍出現黑框時 · 音樂偵測 · 打字偵測 · 儲存位置等內容。"
+          ]
+        }
+      ],
+      "body": "您好，我是 BUG。\n\n首次推出 Linux 版。以 Windows 1.19.2 為基準製作。\n\n■ BUG Clicker Linux 版（beta）開始了。\n\n* 具備與 Windows 1.19.2 相同的功能。角色自訂 · 台詞 · 配件 · 對話框 · 提醒 · 分享都能照常使用。\n* 由於是 beta 版，可能有不足之處或無法運作。若有問題，請從 設定 → 資訊 → 問題排解 →「建立問題回報檔案」建立檔案並傳給我們。\n\n■ 第一次啟動時，請先允許執行一次。\n\n* 在下載的檔案上按右鍵 → 內容，開啟「允許以程式執行」。\n* 若仍無法啟動，請參考 設定 → 資訊 → 常見問題 中的 Linux 項目。\n\n■ Linux 安裝 · 啟動相關的詢問，回覆可能會較慢。\n\n* Linux 版的安裝 · 啟動說明，BUG 也不太熟悉，是從網路上查詢整理的內容。\n* 每台電腦的環境不同，確認問題可能需要一些時間。敬請見諒。\n\n■ Linux 上不同的地方\n\n* 音樂偵測會直接接收喇叭 · 耳機發出的聲音。\n* 打字偵測目前還無法使用。在找到安全的方法之前會先關閉。\n* 在部分畫面上，為了讓角色正常移動，會以相容模式啟動。\n\n■ 在常見問題中新增了 Linux 項目。\n\n* 整理了無法啟動時 · 角色周圍出現黑框時 · 音樂偵測 · 打字偵測 · 儲存位置等內容。\n\n若對更新有任何疑問，請聯絡 BUG。\n感謝所有使用 BUG Clicker 的各位。"
+    },
+    "zhcn": {
+      "items": [
+        {
+          "t": "new",
+          "title": "BUG Clicker Linux 版（beta）开始了。",
+          "sub": [
+            "具备与 Windows 1.19.2 相同的功能。角色自订 · 台词 · 配件 · 对话框 · 提醒 · 分享都能照常使用。",
+            "由于是 beta 版，可能有不足之处或无法运作。若有问题，请从 设置 → 信息 → 问题排解 →「创建问题回报文件」创建文件并传给我们。"
+          ]
+        },
+        {
+          "t": "new",
+          "title": "第一次启动时，请先允许运行一次。",
+          "sub": [
+            "在下载的文件上按右键 → 内容，打开「允许以程序运行」。",
+            "若仍无法启动，请参考 设置 → 信息 → 常见问题 中的 Linux 项目。"
+          ]
+        },
+        {
+          "t": "new",
+          "title": "Linux 安装 · 启动相关的询问，回复可能会较慢。",
+          "sub": [
+            "Linux 版的安装 · 启动说明，BUG 也不太熟悉，是从网络上查找整理的内容。",
+            "每台电脑的环境不同，确认问题可能需要一些时间。敬请见谅。"
+          ]
+        },
+        {
+          "t": "new",
+          "title": "Linux 上不同的地方",
+          "sub": [
+            "音乐侦测会直接接收喇叭 · 耳机发出的声音。",
+            "打字侦测目前还无法使用。在找到安全的方法之前会先关闭。",
+            "在部分画面上，为了让角色正常移动，会以兼容模式启动。"
+          ]
+        },
+        {
+          "t": "improve",
+          "title": "在常见问题中添加了 Linux 项目。",
+          "sub": [
+            "整理了无法启动时 · 角色周围出现黑框时 · 音乐侦测 · 打字侦测 · 保存位置等内容。"
+          ]
+        }
+      ],
+      "body": "您好，我是 BUG。\n\n首次推出 Linux 版。以 Windows 1.19.2 为基准制作。\n\n■ BUG Clicker Linux 版（beta）开始了。\n\n* 具备与 Windows 1.19.2 相同的功能。角色自订 · 台词 · 配件 · 对话框 · 提醒 · 分享都能照常使用。\n* 由于是 beta 版，可能有不足之处或无法运作。若有问题，请从 设置 → 信息 → 问题排解 →「创建问题回报文件」创建文件并传给我们。\n\n■ 第一次启动时，请先允许运行一次。\n\n* 在下载的文件上按右键 → 内容，打开「允许以程序运行」。\n* 若仍无法启动，请参考 设置 → 信息 → 常见问题 中的 Linux 项目。\n\n■ Linux 安装 · 启动相关的询问，回复可能会较慢。\n\n* Linux 版的安装 · 启动说明，BUG 也不太熟悉，是从网络上查找整理的内容。\n* 每台电脑的环境不同，确认问题可能需要一些时间。敬请见谅。\n\n■ Linux 上不同的地方\n\n* 音乐侦测会直接接收喇叭 · 耳机发出的声音。\n* 打字侦测目前还无法使用。在找到安全的方法之前会先关闭。\n* 在部分画面上，为了让角色正常移动，会以兼容模式启动。\n\n■ 在常见问题中添加了 Linux 项目。\n\n* 整理了无法启动时 · 角色周围出现黑框时 · 音乐侦测 · 打字侦测 · 保存位置等内容。\n\n若对更新有任何疑问，请联系 BUG。\n感谢所有使用 BUG Clicker 的各位。"
+    }
+  }
+]

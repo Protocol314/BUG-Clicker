@@ -1,0 +1,1 @@
+"use strict";const{parentPort:parentPort,workerData:workerData}=require("worker_threads"),GifEnc=require("./ui/gif.js");try{const{frames:r,w:t,h:e,delays:a,opts:o}=workerData,s=GifEnc.encode(r,t,e,a,o),n=s instanceof Uint8Array?s:Uint8Array.from(s);parentPort.postMessage({ok:!0,data:n})}catch(r){parentPort.postMessage({ok:!1})}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' 'self'; font-src 'self' data:; script-src 'self'">
+<title>BUG Clicker · 찍을 범위</title>
+<link rel="stylesheet" href="../ui/fonts.css">
+<style>
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; cursor: crosshair; user-select: none; font-family: Pretendard, 'Malgun Gothic', sans-serif; }
+#dim { position: fixed; inset: 0; background: rgba(0, 0, 0, .28); }
+#box { position: fixed; display: none; border: 2px dashed #ff6b6b; border-radius: 4px; box-shadow: 0 0 0 9999px rgba(0, 0, 0, .28); }
+body.has #dim { display: none; }
+#size { position: absolute; left: 0; top: -26px; padding: 2px 8px; border-radius: 6px; background: #1b1b1b; color: #eee; font-size: 12px; white-space: nowrap; }
+#tip { position: fixed; left: 50%; top: 24px; transform: translateX(-50%); padding: 10px 16px; border-radius: 12px; background: #1b1b1b; border: 1px solid #3a3a3a; color: #eee; font-size: 13px; line-height: 1.5; text-align: center; pointer-events: none; }
+#tip .sub { color: #9a9a9a; font-size: 12px; }
+</style>
+</head>
+<body>
+<div id="dim"></div>
+<div id="box"><span id="size"></span></div>
+<div id="tip"><div>찍을 범위를 끌어서 정하세요. 손을 떼면 정해집니다.</div><div class="sub">Esc · 오른쪽 클릭으로 그만두기</div></div>
+<script src="../ui/i18n-dict.js"></script>
+<script src="../ui/i18n-zhcn.js"></script>
+<script src="../ui/i18n.js"></script>
+<script src="area.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "bug-clicker",
+  "productName": "BUG Clicker",
+  "version": "1.4.2",
+  "description": "바탕화면 위에 떠 있는 클리커 캐릭터 (Mac 판, Windows 1.19.2 기준)",
+  "main": "boot.js",
+  "author": "BUG",
+  "license": "MIT"
+}

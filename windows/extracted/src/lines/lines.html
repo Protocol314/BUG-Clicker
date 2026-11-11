@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src 'self' data: https:; style-src 'unsafe-inline' 'self'; font-src 'self' data:; script-src 'self'">
+<title>BUG Clicker 대사 편집</title>
+<link rel="stylesheet" href="../ui/fonts.css">
+<link rel="stylesheet" href="../ui/bubble-shape.css">
+<link rel="stylesheet" href="../ui/bubble-fx.css">
+<link rel="stylesheet" href="../settings/settings.css">
+<link rel="stylesheet" href="../ui/parts-view.css">
+<link rel="stylesheet" href="lines.css">
+<script src="../ui/theme.js"></script>
+<link rel="stylesheet" href="../ui/find.css">
+</head>
+<body>
+<div id="app">
+  <header class="appbar">
+    <div class="appbar__row drag">
+      <img class="brand__logo" src="../../assets/clicker-logo.png" alt="">
+      <span class="appbar__brand">BUG</span>
+      <span class="brand__sub">대사 편집</span>
+      <div class="ln-bar">
+        <span class="hist" id="hist"></span>
+        <select id="pick" translate="no" class="select" aria-label="캐릭터"></select>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab is-on" data-key="lines">누를 때 대사 <span class="tab__count" id="cLines"></span></button>
+      <button class="tab" data-key="idleLines">혼잣말 대사 <span class="tab__count" id="cIdle"></span></button>
+      <button class="tab" data-key="special">특수 대사 <span class="beta-tag" translate="no">BETA</span> <span class="tab__count" id="cSpecial"></span></button>
+    </nav>
+  </header>
+
+  <div class="ln">
+    
+    <aside class="ln-prev">
+      <div class="ln-stage" id="stage">
+        <div class="seg seg--inline ln-bgseg" id="segBg" aria-label="무대 바탕"></div>
+        <div class="ln-bubble" id="bubble" translate="no"></div>
+        <div class="ln-char" id="char"></div>
+        <div class="ln-part" id="partHost"></div>
+      </div>
+      <p class="ln-size" id="sizeInfo"></p>
+      <p class="set-label ln-help">줄의 ▶ 를 누르면 이 캐릭터의 말풍선으로 보여 줍니다.
+        말풍선 모양은 캐릭터 꾸미기 → 말풍선에서 바꿉니다.</p>
+      <div class="set-hint ln-guide">
+        <p class="ln-guide__lead">긴 대사도 괜찮습니다.</p>
+        <p>길이 제한이 없고, 대사가 길면 말풍선이 그만큼 커집니다.</p>
+        <p>대사 사이에 // 를 넣으면 나눠서 차례로 말합니다. 예: 아야! // 헤헤, 거짓말이야.</p>
+        <details class="ln-guide__more">
+          <summary>자세히 보기</summary>
+          <ul>
+            <li>폭은 260 → 360 → 480px 순서로 넓어지고, 7줄을 넘으면 더 넓힙니다.</li>
+            <li>머리 위가 모자라면 옆이나 발밑의 넓은 자리로 옮겨 앉습니다.</li>
+            <li>그래도 모자라면 글자를 한두 단계 줄이고, 마지막에는 넘치는 줄을 ⋯ 로 접습니다.</li>
+            <li>한눈에 읽히는 길이는 120자 안쪽입니다. 넘는 대사에는 "긴 대사" 표시가 붙습니다.</li>
+          </ul>
+        </details>
+      </div>
+      <div class="ln-measure" id="measure" aria-hidden="true"></div>
+      <button class="set-row set-row--sm" type="button" id="rowInOrder">
+        <div class="set-row__main">
+          <span class="set-row__title">대사를 순서대로</span>
+          <span class="set-row__sub">목록 위에서부터 차례로 나오고, 끝나면 처음으로 돌아갑니다.</span>
+        </div>
+        <span class="switch" id="swInOrder"></span>
+      </button>
+      <button class="set-row set-row--sm" type="button" id="rowNoRepeat">
+        <div class="set-row__main">
+          <span class="set-row__title">같은 대사가 잇달아 나오지 않게</span>
+          <span class="set-row__sub">목록을 한 바퀴 다 쓴 뒤 다시 섞습니다.</span>
+        </div>
+        <span class="switch" id="swNoRepeat"></span>
+      </button>
+      <button class="set-row set-row--sm" type="button" id="rowBubble">
+        <div class="set-row__main">
+          <span class="set-row__title">말풍선 띄우기</span>
+          <span class="set-row__sub">끄면 소리와 눌림만 남습니다.</span>
+        </div>
+        <span class="switch" id="swBubble"></span>
+      </button>
+      
+      <div class="set-row set-row--sm set-row--static" id="rowIdle">
+        <div class="set-row__main">
+          <span class="set-row__title">혼잣말 간격</span>
+          <span class="set-row__sub">가만히 두면 이 간격마다 혼잣말 대사를 합니다.</span>
+        </div>
+        <select class="select" id="idleSel" aria-label="혼잣말 간격"></select>
+      </div>
+    </aside>
+
+    
+    <section class="ln-main">
+      
+      <div class="sp-bar" id="spBar" hidden>
+        <div class="seg" id="segSpKind"><button data-v="alarm">알림</button><button data-v="pill">약 먹는 시간</button><button data-v="water">물 먹는 시간</button><button data-v="todo">할 일</button></div>
+        <div class="seg" id="segSpPhase"><button data-v="before">누르기 전</button><button data-v="after">누른 뒤</button></div>
+      </div>
+      <p class="set-label pad-top" id="keyHelp"></p>
+      
+      <div class="ln-find">
+        <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 4a6.5 6.5 0 0 1 5.2 10.4l4.4 4.4-1.4 1.4-4.4-4.4A6.5 6.5 0 1 1 10.5 4zm0 2a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/></svg>
+        <input id="find" type="search" class="input" placeholder="대사 찾기" aria-label="대사 찾기" autocomplete="off">
+        <span class="ln-find__n" id="findN"></span>
+      </div>
+      <div class="sty-bar" id="styBar"></div>
+      <div class="pick-bar" id="pickBar" hidden></div>
+      <div id="list" class="ln-list"></div>
+      <div class="btnrow ln-foot">
+        <button id="add" class="btn btn--accent">＋ 대사 추가</button>
+        <button id="bulk" class="btn">여러 줄 붙여넣기</button>
+        <button id="fileIn" class="btn btn--ghost">파일에서 불러오기</button>
+        <button id="fileOut" class="btn btn--ghost btn--sm">파일로 저장</button>
+        <span class="ln-gap"></span>
+        <button id="clear" class="btn btn--sm btn--danger">모두 지우기</button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="layer" id="layer" hidden>
+  <div class="backdrop" id="backdrop"></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet__handle"></div>
+    <div class="sheet__title" id="sheetTitle"></div>
+    <div id="sheetBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="../ui/i18n-dict.js"></script>
+<script src="../ui/i18n-zhcn.js"></script>
+<script src="../ui/i18n.js"></script>
+<script src="../ui/bubble-style.js"></script>
+<script src="../ui/bubble-shape.js"></script>
+<script src="../ui/bubble-fx.js"></script>
+<script src="../ui/line-sound.js"></script>
+<script src="../ui/layers.js"></script>
+<script src="../ui/outline.js"></script>
+<script src="../ui/parts-view.js"></script>
+<script src="../ui/rig.js"></script>
+<script src="../ui/kit.js"></script>
+<script src="../ui/stage-bg.js"></script>
+<script src="../ui/lines-file.js"></script>
+<script src="../ui/find.js"></script>
+<script src="../ui/guide-link.js"></script>
+<script src="lines.js"></script>
+</body>
+</html>

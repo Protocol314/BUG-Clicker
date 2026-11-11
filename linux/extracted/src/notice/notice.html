@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline' 'self'; font-src 'self' data:; script-src 'self'">
+<title>BUG Clicker</title>
+<link rel="stylesheet" href="../ui/fonts.css">
+<link rel="stylesheet" href="../settings/settings.css">
+<link rel="stylesheet" href="notice.css">
+<script src="../ui/theme.js"></script>
+</head>
+<body>
+<div id="app">
+  <header class="appbar">
+    <div class="appbar__row drag">
+      <img class="brand__logo" src="../../assets/clicker-logo.png" alt="">
+      <span class="appbar__brand">BUG</span>
+      <span class="brand__sub" id="title"></span>
+    </div>
+  </header>
+  <main class="nt">
+    <div class="nt-head">
+      <span class="nt-mark" id="mark"></span>
+      <p class="nt-msg" id="msg"></p>
+    </div>
+    <div class="nt-detail" id="detail"></div>
+  </main>
+  <footer class="nt-foot" id="foot"></footer>
+</div>
+<script src="../ui/i18n-dict.js"></script>
+<script src="../ui/i18n-zhcn.js"></script>
+<script src="../ui/i18n.js"></script>
+<script src="../ui/kit.js"></script>
+<script src="notice.js"></script>
+</body>
+</html>

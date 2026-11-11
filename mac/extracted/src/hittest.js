@@ -1,0 +1,1 @@
+"use strict";function hitTest(t,h,i){if(!t||!h)return!1;const e=(i.x-h.x)/h.width,r=(i.y-h.y)/h.height;if(!(e>=0&&e<1&&r>=0&&r<1))return!1;const n=Math.min(t.gw-1,Math.floor(e*t.gw)),o=Math.min(t.gh-1,Math.floor(r*t.gh));return 1===t.bits[o*t.gw+n]}module.exports={hitTest:hitTest};

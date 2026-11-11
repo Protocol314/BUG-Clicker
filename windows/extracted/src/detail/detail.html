@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src 'self' data: https:; style-src 'unsafe-inline' 'self'; font-src 'self' data:; media-src data:; script-src 'self'">
+<title>BUG Clicker 캐릭터 꾸미기</title>
+<link rel="stylesheet" href="../ui/fonts.css">
+<link rel="stylesheet" href="../settings/settings.css">
+<link rel="stylesheet" href="../ui/parts-view.css">
+<link rel="stylesheet" href="../ui/bubble-shape.css">
+<link rel="stylesheet" href="../ui/bubble-fx.css">
+<link rel="stylesheet" href="detail.css">
+<script src="../ui/theme.js"></script>
+<link rel="stylesheet" href="../ui/find.css">
+</head>
+<body>
+<div id="app">
+  <header class="appbar">
+    <div class="appbar__row drag">
+      <img class="brand__logo" src="../../assets/clicker-logo.png" alt="">
+      <span class="appbar__brand">BUG</span>
+      <span class="brand__sub">캐릭터 꾸미기</span>
+      <div class="tb-bar">
+        <span class="hist" id="hist"></span>
+        <select id="pick" translate="no" class="select" aria-label="캐릭터"></select>
+        <button id="newChar" class="btn btn--sm">＋ 새 캐릭터</button>
+        <button id="openDir" class="btn btn--sm btn--ghost">폴더 열기</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="tb">
+    
+    <section class="tb-stage-wrap">
+      <div class="tb-tools">
+        <div class="seg seg--inline" id="segSize" aria-label="크기">
+          <button data-v="160">160</button>
+          <button data-v="260">260</button>
+          <button data-v="420">420</button>
+        </div>
+        <div class="tb-view">
+          <span class="tb-view__z" id="viewZoom" translate="no" hidden>100%</span>
+          <button class="btn btn--sm" id="viewReset" type="button" hidden>원래 보기</button>
+          <div class="seg seg--inline" id="segBg" aria-label="무대 바탕"></div>
+        </div>
+      </div>
+
+      <div class="tb-stage" id="stage" title="PNG 를 여기에 끌어다 놓으면 파일 이름으로 칸을 맞춰 넣습니다">
+        <div class="tb-bubble" id="bubble" translate="no"></div>
+        <div class="tb-char" id="char">
+          <img class="tb-layer" id="lBody" alt="">
+          <div class="tb-layer" id="lBob"><div class="tb-layer" id="lNod">
+            <div class="tb-layer" id="lPat"><div class="tb-layer" id="lHead"><div class="neck-sh" id="lNeckSh"><b><i></i></b></div><img id="h1" alt=""><img id="h2" alt=""><img id="h3" alt=""><img id="h4" alt=""></div></div>
+          </div></div>
+          <canvas class="tb-over" id="over"></canvas>
+        </div>
+        <div class="tb-dropmsg">PSD 나 PNG 를 여기에 놓으면 이름(head1 · head2 · body …)으로 칸을 맞춰 넣습니다</div>
+      </div>
+
+      <div class="chips tb-chips">
+        <button class="chip" data-ov="frame">캔버스 테두리</button>
+        <button class="chip is-on" data-ov="neck">목 기준선</button>
+        <button class="chip chip--guide" id="guide" type="button"></button>
+      </div>
+      <div class="btnrow tb-actions">
+        <button id="press" class="btn btn--accent">눌러 보기</button>
+        <button id="blink" class="btn">깜빡</button>
+        <button id="breathe" class="btn">숨쉬기</button>
+        <button id="say" class="btn">말풍선</button>
+        <button id="beatTest" class="btn">박자</button>
+        <button id="keyTest" class="btn">타자</button>
+      </div>
+      <p class="set-label tb-help">캐릭터를 직접 눌러도 됩니다. 길게 누르면 눌린 채로 버팁니다.<br>
+        마우스 휠로 확대 · 축소하고, 빈 곳을 끌어 보는 자리를 옮깁니다.<br>
+        이 캐릭터 폴더를 지켜보는 중입니다. 포토샵에서 같은 이름으로 다시 내보내면 바로 바뀝니다.</p>
+    </section>
+
+    
+    <aside class="tb-side">
+      <nav class="tabs tabs--side" id="tabs">
+        <button class="tab is-on" data-tab="img">그림</button>
+        <button class="tab" data-tab="parts">파츠 <span class="beta-tag" translate="no">BETA</span></button>
+        <button class="tab" data-tab="motion">동작</button>
+        <button class="tab" data-tab="sound">소리</button>
+        <button class="tab" data-tab="bubble">말풍선</button>
+      </nav>
+      <div class="tb-side__body">
+        <section id="tab-img">
+          <div class="psdcard">
+            <div class="psdcard__main">
+              <b>PSD 바로 넣기</b>
+              <span>그룹 이름이 body · head1 · head2 · head3 · back1 · back2 · side1 · side2 인 PSD 를 넣으면 칸마다 알아서 나눠 넣습니다. 무대에 끌어다 놓아도 됩니다.</span>
+            </div>
+            <div class="psdcard__btns">
+              <button id="psdOpen" class="btn btn--sm btn--accent">PSD 불러오기</button>
+              <button id="psdTemplate" class="btn btn--sm btn--ghost">제작용 틀 받기</button>
+            </div>
+          </div>
+          <p class="set-label">PNG 를 한 장씩 넣어도 됩니다. 칸에 끌어다 놓거나 넣기를 누르세요.</p>
+          <p class="set-label">움직이는 GIF · APNG 도 넣을 수 있습니다 (8MB 까지). 넣은 그대로 움직입니다.</p>
+          <div id="imgDetailRow"></div>
+          <div id="slots"></div>
+          <div class="set-sec">추가 그림 · 움직임</div>
+          <div id="layerBox"></div>
+          <div class="set-sec">바탕화면</div>
+          <div id="startSizeBox"></div>
+          <div class="set-sec">그림자</div>
+          <div id="shadowBox"></div>
+          <div class="set-sec">아웃라인 · 글로우</div>
+          <div id="outlineBox"></div>
+          <div class="set-sec">점검</div>
+          <p class="set-label">아래 규격(정사각 · 800 × 800 · 목 겹침 30px 등)은 <b>권장</b>일 뿐, 꼭 따르지 않아도 됩니다.
+            크기가 다르거나 정사각형이 아니어도 앱이 비율 그대로 아래쪽 가운데에 앉힙니다. 점검은 참고로만 봐 주세요.</p>
+          <div id="checks"></div>
+        </section>
+        <section id="tab-parts" hidden></section>
+        <section id="tab-motion" hidden></section>
+        <section id="tab-sound" hidden></section>
+        <section id="tab-bubble" hidden></section>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="layer" id="layer" hidden>
+  <div class="backdrop" id="backdrop"></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet__handle"></div>
+    <div class="sheet__title" id="sheetTitle"></div>
+    <div id="sheetBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="../ui/i18n-dict.js"></script>
+<script src="../ui/i18n-zhcn.js"></script>
+<script src="../ui/i18n.js"></script>
+<script src="../bubble.js"></script>
+<script src="../ui/sounds.js"></script>
+<script src="../ui/bubble-style.js"></script>
+<script src="../ui/bubble-shape.js"></script>
+<script src="../ui/bubble-fx.js"></script>
+<script src="../ui/motion.js"></script>
+<script src="../ui/parts-view.js"></script>
+<script src="../ui/pet-fx.js"></script>
+<script src="../ui/layers.js"></script>
+<script src="../ui/outline.js"></script>
+<script src="../ui/rig.js"></script>
+<script src="../ui/pet-area.js"></script>
+<script src="../ui/kit.js"></script>
+<script src="../ui/stage-bg.js"></script>
+<script src="../ui/find.js"></script>
+<script src="../ui/guide-link.js"></script>
+<script src="detail.js"></script>
+<script src="rig-tab.js"></script>
+</body>
+</html>

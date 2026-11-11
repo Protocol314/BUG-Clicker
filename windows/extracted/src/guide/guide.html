@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline' 'self'; font-src 'self' data:; script-src 'self'">
+<title>BUG Clicker 사용 안내</title>
+<link rel="stylesheet" href="../ui/fonts.css">
+<link rel="stylesheet" href="../settings/settings.css">
+<link rel="stylesheet" href="guide.css">
+<script src="../ui/theme.js"></script>
+</head>
+<body>
+<div id="app">
+  <header class="appbar">
+    <div class="appbar__row drag">
+      <img class="brand__logo" src="../../assets/clicker-logo.png" alt="">
+      <span class="appbar__brand">BUG</span>
+      <span class="brand__sub">사용 안내</span>
+      <span class="gd-step" id="stepNo"></span>
+    </div>
+    
+    <div class="gd-langbar">
+      <div class="seg gd-lang" id="langPick" translate="no" aria-label="Language">
+        <button data-v="ko">한국어</button>
+        <button data-v="en">English</button>
+        <button data-v="ja">日本語</button>
+        <button data-v="zh">繁體中文</button>
+        <button data-v="zhcn">简体中文</button>
+      </div>
+    </div>
+  </header>
+  <main class="gd">
+    <div class="gd-pages" id="pages"></div>
+    <div class="gd-dots" id="dots" role="tablist" aria-label="안내 장"></div>
+    <p class="gd-ai" id="aiNote">English · 日本語 · 繁體中文 · 简体中文 화면은 AI 기반 기계 번역입니다. 어색한 번역이 있으면 정보 → 소식 · 문의에서 알려 주세요.</p>
+  </main>
+  <footer class="gd-foot">
+    <button id="skip" class="btn btn--ghost btn--sm">건너뛰기</button>
+    <button id="site" class="btn btn--ghost btn--sm" hidden>세부 가이드 보기 (사이트)</button>
+    <span class="gd-gap"></span>
+    <button id="prev" class="btn">이전</button>
+    <button id="next" class="btn btn--accent">다음</button>
+  </footer>
+</div>
+<script src="../ui/i18n-dict.js"></script>
+<script src="../ui/i18n-zhcn.js"></script>
+<script src="../ui/i18n.js"></script>
+<script src="../ui/kit.js"></script>
+<script src="../ui/motion.js"></script>
+<script src="guide.js"></script>
+</body>
+</html>
