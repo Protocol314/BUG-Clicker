@@ -53,12 +53,92 @@ Copy-Item .\analysis\windows\resources\elevate.exe .\bug-clicker-electron\node_m
 
 ## Linux
 
-그래픽 데스크톱 세션과 배포판의 GTK, NSS/NSPR, X11 또는 Wayland, ALSA 등 Electron 시스템 라이브러리가 필요합니다. 누락된 라이브러리는 `ldd ./bug-clicker-electron/node_modules/electron/dist/electron | grep 'not found'`로 확인할 수 있습니다.
+그래픽 데스크톱 세션과 배포판의 GTK, NSS/NSPR, X11 또는 Wayland, ALSA 등 Electron 시스템 라이브러리가 필요합니다. 아래 명령은 해당 버전의 Debian 계열 배포판에서 실행하며, 패키지 저장소 접근과 관리자 권한이 필요합니다. Raspberry Pi에서는 64비트 OS와 GUI가 필요하며, ARM64 실행은 원본 x64 설치본과 달라 별도 검증이 필요합니다.
+
+**Debian 13 / Raspberry Pi OS 기반 Debian 13 / Ubuntu 24.04:**
+
+```sh
+sudo apt update
+sudo apt install -y python3 libasound2t64 libatk-bridge2.0-0t64 \
+  libatk1.0-0t64 libatspi2.0-0t64 libcups2t64 libglib2.0-0t64 \
+  libgtk-3-0t64 libnspr4 libnss3 libdbus-1-3 libdrm2 libgbm1 \
+  libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxdamage1 libxext6 \
+  libxfixes3 libxkbcommon0 libxrandr2 libxshmfence1 libxss1 libxrender1 \
+  libpango-1.0-0 libcairo2 libnotify4 libuuid1
+```
+
+**Debian 12 / Raspberry Pi OS 기반 Debian 12 / Ubuntu 22.04:**
+
+```sh
+sudo apt update
+sudo apt install -y python3 libasound2 libatk-bridge2.0-0 \
+  libatk1.0-0 libatspi2.0-0 libcups2 libglib2.0-0 \
+  libgtk-3-0 libnspr4 libnss3 libdbus-1-3 libdrm2 libgbm1 \
+  libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxdamage1 libxext6 \
+  libxfixes3 libxkbcommon0 libxrandr2 libxshmfence1 libxss1 libxrender1 \
+  libpango-1.0-0 libcairo2 libnotify4 libuuid1
+```
+
+다른 버전은 패키지 이름이 다를 수 있습니다. 위 준비 과정에서 Electron을 설치한 후 누락된 라이브러리는 다음 명령으로 확인합니다. `not found`가 출력되지 않으면 `ldd`가 확인한 라이브러리는 모두 찾아진 것입니다.
+
+```sh
+ldd ./bug-clicker-electron/node_modules/electron/dist/electron | grep 'not found'
+```
+
+준비 명령을 실행한 같은 폴더에서 원본 업데이트 설정을 복사하고 앱을 실행합니다.
 
 ```sh
 cp ./analysis/linux/resources/update.json ./bug-clicker-electron/node_modules/electron/dist/resources/
 
 ./bug-clicker-electron/node_modules/electron/dist/electron ./analysis/linux/extracted
+```
+
+### Linux 로그인 시 자동 실행
+
+원본 앱의 내장 자동 실행 기능은 위의 개발용 Electron 방식에서 동작하지 않습니다. 대신 [XDG Autostart](https://specifications.freedesktop.org/autostart/0.5/)를 지원하는 그래픽 데스크톱에서 현재 사용자의 로그인 시 실행하도록 별도 설정할 수 있습니다. 먼저 위의 수동 실행이 되는지 확인하고 앱을 종료한 뒤, 같은 **`analysis`와 `bug-clicker-electron`의 부모 폴더**에서 실행합니다.
+
+```sh
+python3 - <<'PY'
+from pathlib import Path
+import os
+import shlex
+
+base = Path.cwd().resolve()
+electron = base / 'bug-clicker-electron/node_modules/electron/dist/electron'
+app = base / 'analysis/linux/extracted'
+if not electron.is_file() or not os.access(electron, os.X_OK) or not (app / 'package.json').is_file():
+    raise SystemExit('Electron 또는 원본 앱이 없습니다. 준비와 Linux 수동 실행을 먼저 완료하세요.')
+
+home = Path.home()
+config = Path(os.environ.get('XDG_CONFIG_HOME') or str(home / '.config'))
+if not config.is_absolute():
+    raise SystemExit('XDG_CONFIG_HOME은 절대 경로여야 합니다.')
+launcher = home / '.local/share/bug-clicker-original-autostart/start.sh'
+desktop = config / 'autostart/bug-clicker-original.desktop'
+if os.path.lexists(launcher) or os.path.lexists(desktop):
+    raise SystemExit('기존 자동 실행 파일이 있습니다. 내용을 확인한 뒤 필요하면 아래 해제 방법을 사용하세요.')
+
+launcher.parent.mkdir(parents=True, exist_ok=True)
+desktop.parent.mkdir(parents=True, exist_ok=True)
+with launcher.open('x', encoding='utf-8') as f:
+    f.write('#!/bin/sh\nexec ' + shlex.quote(str(electron)) + ' ' + shlex.quote(str(app)) + '\n')
+launcher.chmod(0o700)
+with desktop.open('x', encoding='utf-8') as f:
+    f.write('[Desktop Entry]\nType=Application\nName=BUG Clicker\n'
+            + r'Exec=sh -c "exec \\"\\$HOME/.local/share/bug-clicker-original-autostart/start.sh\\""'
+            + '\nTerminal=false\n')
+print('자동 실행 설정:', desktop)
+print('실행 스크립트:', launcher)
+PY
+```
+
+로그아웃 후 **같은 사용자로 그래픽 데스크톱에 로그인**하면 실행됩니다. 텍스트 콘솔 로그인이나 데스크톱이 없는 환경에서 자동으로 시작하는 설정은 아닙니다. 폴더를 이동한 경우 아래 방법으로 해제한 후 새 위치의 부모 폴더에서 다시 설정하세요. 경로에 공백이 있어도 사용할 수 있습니다. 앱의 기존 사용자 데이터·업데이트 동작은 수동 실행과 같습니다.
+
+자동 실행 해제:
+
+```sh
+rm -f -- "${XDG_CONFIG_HOME:-$HOME/.config}/autostart/bug-clicker-original.desktop"
+rm -f -- "$HOME/.local/share/bug-clicker-original-autostart/start.sh"
 ```
 
 ## macOS
